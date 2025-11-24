@@ -1,0 +1,24 @@
+procedura allineamento db piero giacomelli..
+
+1. DUMP ORIGINALE.
+
+2. ESECUZIONE PG2RSU.SQL (molto lunga a causa dei log)
+mysql -uroot -proot pg < pg2rus.sql
+
+3. DUMP LOG
+mysqldump -uroot -proot pg LOG > pg_log.sql
+
+4. creazione db pg_log
+mysqladmin -uroot -proot drop pg_log
+mysqladmin -uroot -proot create pg_log
+
+5. ripristino pg_log.sql
+mysql -uroot -proot pg_log < pg_log.sql
+
+6. completare db LOG
+mysql -uroot -proot pg_log < logmail.sql
+
+7. cancellare LOG da og
+mysql -uroot -proot pg_log < droplog.sql
+
+

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!-- a tag library descriptor -->
+
+<taglib> 
+  <!-- after this the default space is
+	"http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd"
+   --> 
+  
+  <!-- The version number of this tag library -->
+  <tlibversion>0.1</tlibversion>
+  
+  <!-- The JSP specification version required to function -->
+  <jspversion>1.1</jspversion>
+  
+  <!-- The short name of this tag library -->
+  <shortname>pg</shortname>
+  
+  <!-- Public URI that uniquely identifies this version of the tag library 
+  <uri>http://jakarta.apache.org/taglibs/utility</uri> --> 
+  
+  <!-- General information about this tag library -->
+  <info> pg tag library
+    V.0.0 
+    01-12-2017 inizio </info>
+  
+  <!-- ******************** Defined Custom Tags *************************** -->
+  
+  <tag>
+    <name>whiletipogara</name>
+    <tagclass>it.acxent.pg.taglib.WhileTipoGaraTag</tagclass>
+    <teiclass>it.acxent.pg.taglib.WhileTipoGaraTagExtraInfo</teiclass>
+    <info> While tipo gara </info>
+    <attribute>
+      <name>id_tipoPadre</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>id_tipoPadreSelected</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>lang</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>rowbeanname</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+  
+  <!-- TipoListTreeTag tag -->
+  <tag>
+    <name>tipolisttree</name>
+    <tagclass>it.acxent.art.taglib.TipoListTreeTag</tagclass>
+    <attribute>
+      <name>id_tipo</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+   <!-- CaricaTipoGaraTag tag -->
+  <tag>
+    <name>caricatipogara</name>
+    <tagclass>it.acxent.pg.taglib.CaricaTipoGaraTag</tagclass>
+    <attribute>
+      <name>id_tipoGaraPadre</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+	 <attribute>
+      <name>nomelista</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+    <!-- CaricaGaraTag tag -->
+  <tag>
+    <name>caricagara</name>
+    <tagclass>it.acxent.pg.taglib.CaricaGaraTag</tagclass>
+    <attribute>
+      <name>id_tipoGara</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+	 <attribute>
+      <name>nomelista</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+</taglib>

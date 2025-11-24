@@ -1,0 +1,538 @@
+/*!
+ * Regalami Un Sorriso ONLUS style css
+ * Author: Agenzia Verde - www.agenziaverde.it 2017
+ */
+
+
+* {
+	-webkit-transition: all .10s ease-in-out;
+	transition: all .10s ease-in-out;
+}
+ @media (min-width: 992px) {
+body {
+	padding-top: 56px;
+	 }
+}
+body {
+	padding-top: 75px;
+	font-family: 'Roboto', sans-serif;
+	color: #434343;
+	font-weight: 300;
+}
+
+a {
+	color: #fd9300
+}
+a:hover {
+	color: #fd9300
+}
+
+hr {
+	width: 100%;
+}
+
+.bg-gray {
+	background: #eee;
+}
+
+/*Typo*/
+h1 {
+	font-size: 25px;
+	color: #535353;
+}
+
+h1:after {
+	margin-top: 10px;
+	height: 5px;
+	display: block;
+	width: 35px;
+	background: #fec100;
+	content: '';
+}
+h2 {
+	font-size: 22px;
+}
+blockquote footer {
+	background: none
+}
+.font-weight-light {
+	font-weight: 300;
+}
+
+
+.arrow_box {
+	position: relative;
+	border-right: 1px solid #ccc;
+}
+.arrow_box:after, .arrow_box:before {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.arrow_box:after {
+	border-color: rgba(248, 249, 250, 0);
+	border-left-color: #f8f9fa;
+	border-width: 15px;
+	margin-top: -15px;
+}
+.arrow_box:before {
+	border-color: rgba(204, 204, 204, 0);
+	border-left-color: #ccc;
+	border-width: 16px;
+	margin-top: -16px;
+}
+
+@media (max-width: 767px) {
+	.arrow_box {
+		border:none;
+		width: 100%;
+	}
+	.arrow_box:after, .arrow_box:before {
+		display: none
+	}
+	.arrow_box h2 {
+		text-align: center !important
+			
+	}
+}
+
+
+/* buttons */
+.btn {
+	border-radius: 0;
+	border: 0;
+}
+.btn-primary {
+	background-color: #fda700;
+}
+.btn-primary:hover {
+	background-color: #fd9300;
+	border: 0
+}
+.btn-warning {
+	background-color: #fec100;
+	color: #fff !important;
+	font-weight: 500 !important;
+}
+.btn-warning:hover {
+	background-color: #fda700;
+	color: #fff;
+}
+.btn-warning .btn-light {
+	background-color: #fff;
+	border-radius: 0;
+	border: 3px solid #fec100;
+	padding-top: 0;
+	padding-bottom: 0
+}
+.btn-light i {
+	color: #fec100;
+}
+.btn-light:hover {
+	background-color: #fec100;
+	border: 3px solid #fec100;
+}
+.btn-light:hover i {
+	color: #fff;
+}
+
+
+/*form*/
+.form-control {
+	background-clip: inherit;
+}
+.form-control-sm, .input-group-sm > .form-control, .input-group-sm > .input-group-addon, .input-group-sm > .input-group-btn > .btn {
+	border-radius: 0;
+}
+ .form-control:placeholder, .custom-select {
+ color:#999
+}
+.input-group .form-control:not(:last-child), .input-group-addon:not(:last-child), .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn, .input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:not(:last-child) > .btn, .input-group-btn:not(:last-child) > .btn-group > .btn, .input-group-btn:not(:last-child) > .dropdown-toggle {
+	border-right: 0 !important;
+	border-radius: 0;
+}
+.form-control + .input-group-addon:not(:first-child) {
+	border-left: 0 !important;
+	border-radius: 0;
+}
+.input-group-addon {
+	background: #fff;
+	color: #ccc;
+	font-size: 0.8rem;
+}
+.form-giallo {
+	background-color: #fec100;
+}
+.form-giallo .btn-sm {
+	padding: 0.3rem 0.5rem;
+}
+.form-giallo .custom-select, .form-giallo .form-control:focus, .form-giallo .form-control + .input-group-addon:not(:first-child) {
+/*border: 1px solid #fda700;*/
+}
+.form-grigio {
+	background-color: #c9c9c9;
+}
+.form-grigio .custom-select, .form-grigio .form-control:focus, .form-grigio .form-control + .input-group-addon:not(:first-child) {
+/*	border: 1px solid #434343;*/
+}
+form h2 {
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	font-weight: 300;
+	line-height: 1.1;
+}
+.form-giallo .form-row, .form-grigio .form-row {
+	margin: 0 3px;
+	padding-top: 7px !important
+}
+.form-giallo .form-group, .form-grigio .form-group {
+	margin-bottom: 7px;
+}
+.form-giallo .form-row > .col, .form-row > [class*="col-"], .form-grigio .form-row > .col, .form-row > [class*="col-"] {
+	padding-left: 3px;
+	padding-right: 3px;
+}
+.form-giallo button, .form-grigio button {
+	margin: 0 0.2rem;
+}
+
+
+/* Navbar */
+.navbar-light2 {
+	height: 75px;
+}
+@media (max-width: 767px) {
+.navbar-light2 {
+	height: 90px;
+	 }
+}
+
+.navbar-nav h2 {
+	color: #fec100;
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	margin: 10px;
+	}
+ @media (min-width: 992px) {
+/*dropdown menu*/
+.vertical-divider {
+	border-right: 1px solid #ccc;
+}
+}
+.navbar-light {
+	-webkit-box-shadow: 0px 3px 5px 0px rgba(170,170,170,1);
+	-moz-box-shadow: 0px 3px 5px 0px rgba(170,170,170,1);
+	box-shadow: 0px 3px 5px 0px rgba(170,170,170,1);
+	border-top: 3px solid #fec100;
+}
+.navbar-light .navbar-nav .nav-link {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #434343;
+	-webkit-transition: color .5s ease;
+	-moz-transition: color .5s ease;
+	-ms-transition: color .5s ease;
+	-o-transition: color .5s ease;
+	transition: color .5s ease;
+	 }
+
+
+.navbar-light .navbar-nav .nav-link:hover {
+	color: #fec100;
+}
+.navbar-light .navbar-nav .active {
+	color: #fec100 !important;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.dropdown-menu {
+	border: 0;
+	padding: 1.5rem 1rem;
+}
+ @media (min-width: 992px) {
+
+.dropdown-menu {
+	min-width: 200px;
+	border: 0;
+	border-radius: 0;
+	padding: 1.2rem 1.8rem;
+	font-size: 0.8rem;
+	/*background: none;*/
+	color: #434343;
+}
+.dropdown-menu.columns-2 {
+	min-width: 400px;
+}
+.dropdown-menu li a {
+	padding: 5px 15px;
+	font-weight: 300;
+}
+}
+.multi-column-dropdown {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+.multi-column-dropdown li a {
+	display: block;
+	clear: both;
+	line-height: 1.428571429;
+	color: #535353;
+	white-space: normal;
+}
+.multi-column-dropdown li a:hover {
+	text-decoration: none;
+	color: #fec100;
+	 }
+
+.dropdown-item:focus, .dropdown-item:hover {
+	background: none;
+	color: #fec100;
+}
+
+@media (max-width: 767px) {
+.dropdown-menu.multi-column {
+ min-width: 240px !important;
+ overflow-x: hidden;
+}
+	.navbar-nav {
+		background: #fff;
+	}
+	.dropdown-menu {
+
+	padding: 0.2rem 1rem;
+}
+	.dropdown-menu h2 {
+		margin: 0 5px 5px;
+	}
+	
+	.dropdown-menu li {
+		padding: 3px;
+		margin-left: 5px;
+	}
+}
+
+/* Card - Sostituiscono i Panel */
+.card {
+	-webkit-box-shadow: 0px 1px 2px 0px #aaa;
+	-moz-box-shadow: 0px 1px 2px 0px #aaa;
+	box-shadow: 0px 1px 2px 0px #aaa;
+	-webkit-border-radius: 0 0 0 0;
+	border-radius: 0 0 0 0;
+	padding: 0;
+	border: 1px solid #ddd;
+	margin-bottom: 1rem;
+}
+.card-img-top {
+	border-radius: 0;
+}
+.card-body {
+	padding: 0 0.5rem 0.5rem;
+}
+.card-title {
+	margin-bottom: 5px;
+}
+.card-title a {
+	font-size: 1rem;
+	color: #434343;
+	font-weight: 500;
+}
+.card-text {
+	color: #fec100;
+	font-size: 0.8rem;
+}
+.card-columns {
+	-webkit-column-count: 5;
+	column-count: 5;
+	-webkit-column-gap: 1.25rem;
+	column-gap: 1.25rem
+}
+.card-columns .card {
+	border: 0;
+	box-shadow: none
+}
+.card-columns .card, .card-columns .card img {
+	max-height: 234px;
+	width: auto;
+}
+
+/* Paginatore */
+.zui-pager {
+	margin: 0.5em;
+}
+.zui-pager--center {
+	text-align: center;
+}
+.zui-pager--right {
+	text-align: right;
+}
+.zui-pager .btn-group {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+.zui-pager .btn-group__item {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	height: 40px;
+	float: left;
+}
+.zui-pager .btn-group__item .btn {
+	margin: 0;
+	padding: .5em 1em;
+	border: 0;
+	font-weight: 300;
+	background-color: transparent;
+	box-shadow: inset 0px -2px 0px 0px #bbb;
+	color: #bbb;
+}
+.zui-pager .btn-group__item .btn:hover {
+	box-shadow: inset 0px -4px 0px 0px #bbb;
+}
+.zui-pager .btn-group__item .current {
+	box-shadow: inset 0px -4px 0px 0px #fec100;
+	color: #fec100;
+	font-weight: bold;
+}
+.zui-pager .btn-group__item .current:hover {
+	box-shadow: inset 0px -4px 0px 0px #fec100;
+	cursor: default;
+}
+.zui-pager .btn[disabled] {
+	box-shadow: inset 0px -2px 0px 0px #e6e6e6;
+	color: #e6e6e6;
+}
+.zui-pager .btn[disabled]:hover {
+	box-shadow: inset 0px -2px 0px 0px #e6e6e6;
+	cursor: default;
+}
+.zui-pager__input {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 10px;
+}
+.zui-pager__input > input {
+	width: 2em;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 0;
+	line-height: 1;
+}
+.zui-pager .i-chevron-left, .zui-pager .i-chevron-right {
+	margin: 15px;
+	border-style: solid;
+	border-color: #3a3a3a;
+	width: 6px;
+	height: 6px;
+	display: block;
+	cursor: pointer;
+}
+.zui-pager .i-chevron-left {
+	border-width: 1px 0 0 1px;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+.zui-pager .i-chevron-right {
+	border-width: 1px 1px 0 0;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+/* Pagina Photo Listing */
+@media (max-width: 767px) {
+	.riepilogo {
+		margin-top: 10px;
+	}
+}
+.riepilogo {
+	font-size: 0.8rem
+}
+
+
+/** Footer */
+footer {
+	background: #434343;
+}
+footer h4 {
+	color: #fec100;
+	font-weight: 500;
+	font-size: 1.5em;
+	padding-bottom: 0.5rem;
+}
+footer hr {
+	border-top: 1px solid #666
+}
+footer .media img {
+	border: 1px solid #fff;
+	padding: 0.2rem;
+}
+footer .media h5 {
+	font-weight: normal;
+	margin-bottom: 0;
+	margin-top: 0.5rem;
+	font-size: 0.8rem;
+}
+footer .media h5 a {
+	color: #fff;
+}
+footer .media p {
+	margin: 0;
+	color: #fff;
+	font-size: 0.8rem;
+}
+footer .media p a {
+	color: #fec100;
+}
+footer .list-unstyled a {
+	color: #fff;
+	font-size: 0.8rem;
+}
+footer p {
+	color: #fff;
+	font-size: 0.8rem;
+}
+footer .list-inline li {
+	color: #fff;
+	font-weight: 300;
+}
+footer .list-inline a {
+	color: #fff;
+	font-size: 0.8em;
+}
+footer .list-inline li:after {
+	content: " ::";
+}
+footer .list-inline li:last-child:after {
+	content: "";
+}
+.triangle {
+	height: 0;
+	width: 0;
+	border-bottom: 50px solid #fec100;
+	border-right: 50px solid transparent;
+	border-left: 50px solid transparent;
+	margin: 0 auto;
+}
+.triangle i {
+	color: #fff;
+	text-align: center;
+	margin-left: -7px;
+	margin-top: 20px;
+}
+
+
+@media (max-width: 767px) {
+  .d2-sm-none {
+    display: none !important;
+	}}
+

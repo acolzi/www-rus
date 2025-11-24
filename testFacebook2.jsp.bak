@@ -1,0 +1,138 @@
+<!DOCTYPE html><jsp:useBean id="lang" class="java.lang.String" type="java.lang.String" scope="session" >
+<html>
+<head>
+<title>Facebook Login JavaScript Example</title>
+<meta charset="UTF-8">
+</head>
+<body>
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '5858950737524161',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v15.0',
+	  
+	
+	});
+  };
+</script> 
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/it_IT/sdk.js"></script> 
+
+<!-- fine script body --> 
+
+<a href="javascript:accediFb()">ACCEDI CON FB </a><br>
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"> </fb:login-button>
+	<br>
+	
+	<a href="javascript:logoutFb()">logout fb
+    <script> 
+	
+	function logoutFb(){
+		FB.logout(function(response) {
+   // Person is now logged out
+			    console.log('responser: ' + response);
+});
+	}	
+		
+		
+	function accediFb(){
+			FB.login(function(response) {
+				
+				if (response.status === 'connected') {
+    // Logged into your webpage and Facebook.
+	console.log(response);
+	console.log(response.authResponse.accessToken);
+	console.log(response.authResponse.userID);
+	console.log(response.authResponse.ussignedRequesterID);
+	var f = document.f;
+	//f.accessToken.value=response.authResponse.accessToken;
+		
+					
+  } else {
+    // The person is not logged into your webpage or we are unable to tell. 
+	  
+	    console.log("errore: "+response);
+	  
+  }
+				
+  // handle the response
+}, {scope: 'public_profile,email'});
+		
+		
+	}
+
+	
+	
+	
+	</script> 
+    </a>
+<script>
+  // This is called with the results from from FB.getLoginStatus().
+  function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+		var f = document.f;
+		 f.facebookSignedRequest.value=response.authResponse.signedRequest;
+		
+		
+      testAPI();
+    } else {
+      // The person is not logged into your app or we are unable to tell.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this app.';
+    }
+  }
+
+  // This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+
+/*
+ FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+  */
+ 
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made.
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me',{fields: 'last_name,name,email'}, function(response) {
+      console.log('Successful login for: ' + response.last_name);
+      console.log('Successful login for: ' + response.name);
+      console.log('Successful login for: ' + response.email);
+      console.log('responser: ' + response);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, <br>name: ' + response.name + '<br>lastname: '+response.last_name+ '<br>email: '+response.email+ '<br>id: '+response.id;
+    });
+  }
+</script> 
+
+<!--
+  Below we include the Login Button social plugin. This button uses
+  the JavaScript SDK to present a graphical Login button that triggers
+  the FB.login() function when clicked.
+-->
+
+<div id="status"> </div>
+	<form name="f" id="f">
+<p>
+  <label for="accessToken">Text Field:</label>
+  <input type="text" name="facebookSignedRequest" id="facebookSignedRequest">
+</p></form>
+</body>
+</html>

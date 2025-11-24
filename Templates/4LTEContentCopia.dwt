@@ -1,0 +1,82 @@
+<%@page contentType="text/html; charset=UTF-8" %>
+<%@ taglib uri="/WEB-INF/acxent.tld" prefix="acx" %>
+<%@ page language="java" import="com.ablia.jsp.*" %>
+ 
+<jsp:useBean id="msg" class="java.lang.String" type="java.lang.String" scope="request" >
+</jsp:useBean>
+<jsp:useBean id="logon" class="java.lang.String" type="java.lang.String" scope="request" >
+</jsp:useBean>
+<jsp:useBean id="grantMsg" class="java.lang.String" type="java.lang.String" scope="request" >
+</jsp:useBean>
+<input type="hidden" name="_async" id="_async">
+<jsp:useBean id="encType" class="java.lang.String" type="java.lang.String" scope="request" ></jsp:useBean>
+<input name="beanMsg" type="hidden" id="beanMsg" value="<%=Ab.formatBeanMsg( msg,  grantMsg)%>">
+<input name="logonRes" type="hidden" id="logonRes" value="<%=logon%>">
+<jsp:useBean id="utenteLogon" type="com.ablia.common.UsersI" class="com.ablia.common.Users" scope="session" >
+</jsp:useBean> 
+<jsp:useBean id="df" class="com.ablia.util.SimpleDateFormat" scope="request" type="com.ablia.util.SimpleDateFormat" >
+</jsp:useBean>
+<jsp:useBean id="nf" scope="request" type="java.text.NumberFormat" >
+</jsp:useBean>
+<jsp:useBean id="readonly" class="java.lang.String" type="java.lang.String" scope="request" >
+</jsp:useBean>
+<ab:if_logon_ok trueifnotsecure="true"><!-- TemplateBeginEditable name="bean" -->
+  <input name="pageTitle" type="hidden" id="pageTitle" value="TITOLO DELLA PAGINA">
+  <jsp:useBean id="list" scope="request" class="com.ablia.util.Vectumerator" type="com.ablia.util.Vectumerator">
+  </jsp:useBean>
+  <!--  pagine di dettaglio -->
+  <jsp:useBean id="bean" class="com.ablia.pkg.theBean" type="com.ablia.pkg.theBean" scope="request" >
+  </jsp:useBean>
+  <input name="lastUpdTmst" id="lastUpdTmst" type="hidden" value="<%= bean.getLastUpdTmstString() %>">
+  <!--  pagine di ricerca -->
+  <jsp:useBean id="CR" class="com.ablia.pkg.theBeanCR" type="com.ablia.pkg.theBeanCR" scope="request" >
+  </jsp:useBean>
+  <!-- TemplateEndEditable --> 
+  <!--- intestazione stampa -->
+  <div class="row visible-print-block">
+    <div class="col-lg-12">
+      <div id="printTitleContent" class="pageTitle pull-left">Stampa</div>
+    </div>
+  </div>
+  <div class="content-toolbar hidden-print">
+    <div class="row  row-breadcrumb">
+      <div class="col-lg-8">
+        <ol class="breadcrumb">
+          <!-- TemplateBeginEditable name="breadcrumb" -->
+          <li><a href="javascript:Ab.dashboard()"><i class="fa fa-dashboard"></i> Home</a></li>
+          <li ><a href="javascript:Ab.callAbl('/admin/config/Users',null,'back')">Elenco Utenti</a></li>
+          <li class="active">Dettaglio Utente</li>
+          <!-- TemplateEndEditable -->
+        </ol>
+      </div>
+      <div class="col-lg-4 lastUpdInfo"><!-- TemplateBeginEditable name="lastupdate" --> <%=bean.getLastUpdInfo()%> <!-- TemplateEndEditable --></div>
+    </div>
+    <div class="box box-header">
+      <div class="box-body">
+        <div class="row">
+          <div class="col-lg-8"><!-- TemplateBeginEditable name="toolbar" --><a class="btn btn-app btn-app-sm" href="javascript:newCommand()"> <i class="fa fa-file-o" title="Nuovo Record"></i>Nuovo</a><a class="btn btn-app btn-app-sm" href="javascript:saveCommand()"> <i class="fa fa-floppy-o" title="Salva Record"></i>Salva</a><a class="btn btn-app btn-app-sm" href="javascript:Ab.printW()"> <i class="fa fa-print" title="Stampa"></i>Stampa</a><a class="btn btn-app btn-app-sm" href="javascript:deleteCommand()"> <i class="fa  fa-trash-o" title="Cancella Record"></i>Elimina</a><!-- TemplateEndEditable --></div>
+          <div class="col-lg-4" >
+            <p id="messaggi" class="messaggi"><%=Ab.formatBeanMsg( msg,  grantMsg)%></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="content">
+    <form method="post" action="" name="main" id="main" <%=encType%>>
+      <jsp:include page="../admin/_V4/_inc/_formMainFields.jsp" flush="true" />
+      <!-- TemplateBeginEditable name="logonOk" -->
+      <input type="hidden" name="actionPage" id="actionPage" value="../config/TheBean.abl">
+      <input name="pageType" type="hidden" id="pageType" value="D o R">
+      <input name="currentTab" type="hidden" id="currentTab" value="<%= bean.getCurrentTab() %>">
+      <input name="currentFocus" type="hidden" id="currentFocus" value="<%= bean.getCurrentFocus() %>">
+      <!-- TemplateEndEditable -->
+    </form>
+  </section>
+   <!-- SCRIPT DI RESET --> 
+   <script language="JavaScript" src="../admin/_V4/_js/_reset.js"></script> 
+  <!-- TemplateBeginEditable name="js-pagina" --> 
+  <!-- SCRIPT PERSONALIZZATI DELLA PAGINA --> 
+  <script language="JavaScript" src="../admin/config/_js/ab-theBean.js"></script> 
+  <!-- TemplateEndEditable --> <!-- TemplateBeginEditable name="extra" --> <!-- TemplateEndEditable --> </ab:if_logon_ok>
+<ab:else_logon> gestire il redirect al login </ab:else_logon>  

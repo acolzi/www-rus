@@ -1,0 +1,111 @@
+<%@page contentType="text/html; charset=UTF-8" %>
+<%@ taglib uri="/WEB-INF/acxent.tld" prefix="acx" %>
+<%@ taglib uri="/WEB-INF/art.tld" prefix="art" %>
+<%@ taglib uri="/WEB-INF/pg.tld" prefix="pg" %>
+<!-- Bootstrap core CSS -->
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- FontAwesome Icons -->
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<!-- Roboto Font -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="css/custom-style.css" rel="stylesheet">
+<!-- Css Datepicker -->
+<link href="addons/datepicker/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet">
+<link rel="stylesheet" href="admin/_V4/_css/ajaxLoading.css">
+
+<jsp:useBean id="utenteLogon" class="it.acxent.anag.Users" type="it.acxent.anag.Users" scope="session" >
+</jsp:useBean>
+<jsp:useBean id="msg" class="java.lang.String" type="java.lang.String" scope="request" >
+</jsp:useBean>
+<jsp:useBean id="cart" scope="session" type=   "it.acxent.cart.Cart" class="it.acxent.cart.Cart" >
+</jsp:useBean>
+<jsp:useBean id="cartStatus" scope="request" type="it.acxent.cart.CartStatus" class="it.acxent.cart.CartStatus" >
+</jsp:useBean>
+<jsp:useBean id="lang" class="java.lang.String" type="java.lang.String" scope="session" >
+</jsp:useBean>
+<jsp:useBean id="CR" scope="request" type="it.acxent.pg.FotoCR" class="it.acxent.pg.FotoCR" >
+</jsp:useBean>
+<jsp:useBean id="user" class="it.acxent.pg.Users" type="it.acxent.pg.Users" scope="session" >
+</jsp:useBean>
+<input name="id_tipoSel" type="hidden" id="id_tipoSel" value="<%=CR.getId_tipoGara()%>">
+<!-- Bootstrap core JavaScript --> 
+<script src="vendor/jquery/jquery.min.js"></script> 
+<script src="vendor/popper/popper.min.js"></script> 
+<script src="admin/_V4/_js/_acxent.js"></script>
+<script src="_js/rus-ecom-220218.js"></script> 
+<script src="addons/datepicker/js/bootstrap-datepicker.min.js"></script> 
+<script src="addons/datepicker/locales/bootstrap-datepicker.it.min.js"></script> 
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script> 
+<!-- -->
+<!-- owl -->
+<link rel="stylesheet" href="vendor/owl-carousel/owl.carousel.min.css">
+<link rel="stylesheet" href="vendor/owl-carousel/owl.theme.default.min.css">
+<!-- sweet alert -->
+<link rel="stylesheet" type="text/css" href="js/sweetalert/sweetalert.css">
+<script src="js/sweetalert/sweetalert.min.js"></script>
+<%String menuAttivo = request.getParameter("menuAttivo");%>
+<% if(menuAttivo==null) menuAttivo="home";%>
+<a id="top"></a> 
+<!-- Navigation -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white fixed-top">
+  <div class="container"> <a class="navbar-brand" href="index.html"><img src="images/layout/regalami-un-sorriso.png" alt="<acx:lang>Regalami Un Sorriso Ets</acx:lang>"></a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav">
+        <li class="nav-item"> <a class="nav-link <%= menuAttivo.equals("home") ? "active" : "" %>" href="index.html"><acx:lang>Home</acx:lang></a> </li>
+        <li class="nav-item"> <a class="nav-link <%= menuAttivo.equals("associazione") ? "active" : "" %>" href="associazione.html"><acx:lang>Associazione</acx:lang></a> </li>
+        <li class="nav-item dropdown"> <a href="#" class="dropdown-toggle nav-link  <%= menuAttivo.equals("fotox") ? "active" : "" %>" data-toggle="dropdown"><acx:lang>Foto</acx:lang> <b class="caret"></b></a>
+          <ul class="dropdown-menu multi-column columns-2">
+            <div class="row"> 
+              <pg:whiletipogara id_tipoPadre="0" rowbeanname="rowBean">
+               <div class="col-sm-6 <%=rowBean.getId_tipoGara()==2?"vertical-divider":""%>">
+                  <h2><%=rowBean.getDescrizione()%></h2>
+                  <ul class="multi-column-dropdown">
+                    <pg:whiletipogara id_tipoPadre="<%=rowBean.getId_tipoGara()%>" id_tipoPadreSelected="<%=rowBean.getId_tipoGara()%>"  rowbeanname="rowBean1">
+                      <li><a href="<%=rowBean1.getDescrizione()%>-elenco_eventi-<%=rowBean1.getId_tipoGara()%>---1.html"><%=rowBean1.getDescrizione()%></a></li>
+                    </pg:whiletipogara>
+                  </ul>
+                </div>
+              </pg:whiletipogara>
+            </div>
+          </ul>
+        </li> 
+        <acx:if wherecondition="<%=!user.isDaRinnovare()%>">
+        <li class="nav-item dropdown show"> <a class="nav-link btn btn-sm btn-warning dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true"><acx:lang>Archivio</acx:lang> <b class="caret"></b></a>
+          <ul class="dropdown-menu ">
+            <li><h2 style="margin: 0px;font-size: 12px;"><a style="padding-left: 0px;" href="gallery1.php"><acx:lang>Fino al 2011</acx:lang></a></h2></li>
+            <li><h2 style="margin: 0px;font-size: 12px;"><a style="padding-left: 0px;" href="gallery2.php">2012-2017</a></h2></li>
+          </ul>
+        </li>
+			</acx:if>
+       <acx:else>
+       	  <li class="nav-item dropdown show"> <a class="nav-link btn btn-sm btn-warning dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true"><acx:lang>Archivio</acx:lang> <b class="caret"></b></a>
+          <ul class="dropdown-menu ">
+            <li>
+              <h2 style="margin: 0px;font-size: 12px;"><a style="padding-left: 0px;"><acx:lang>Per poter vedere e scaricare le foto devi effettuare il login ed essere in regola con il rinnovo della quota associativa.</acx:lang></a></h2></li>
+            
+          </ul>
+        </li> 
+       </acx:else>
+        <li class="nav-item"> <a href="login_clienti.html"><img src="https://www.regalamiunsorriso.it/images/btn_donateCC_LG.gif" border="0" name="submit" alt="<acx:lang>PayPal - Il sistema di pagamento online piu' facile e sicuro!</acx:lang>"></a>
+        </li>
+      </ul>
+      <acx:if_logon_ok>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle <%= menuAttivo.equals("account") ? "active" : "" %>" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-user" aria-hidden="true"></i> <acx:lang>Il mio account</acx:lang> </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item" href="dettaglio_clienti.html"><i class="fa fa-user" aria-hidden="true"></i> <acx:lang>Dettaglio Account</acx:lang></a>  <a class="dropdown-item" href="user_logout.html"><i class="fa fa-sign-out" aria-hidden="true"></i> <acx:lang>Esci</acx:lang></a> </div>
+          </li>
+          <li class="nav-item"> <a class="nav-link" href="https://it-it.facebook.com/pg/Regalami-un-sorriso-ETS-189377806523/community/"><img src="images/FB-f-Logo__blue_29.png" class="img-fluid" alt="<acx:lang>Facebook</acx:lang>"></a></li>
+        </ul>
+      </acx:if_logon_ok>
+      <acx:else_logon>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"> <a class="nav-link <%= menuAttivo.equals("login") ? "active" : "" %>" href="login_clienti.html"><i class="fa fa-user" aria-hidden="true"></i> <acx:lang>Login</acx:lang></a> </li>
+          <li class="nav-item"> <a class="nav-link <%= menuAttivo.equals("diventa") ? "active" : "" %>" href="registrazione_utente.html"><i class="fa fa-user-plus" aria-hidden="true"></i> <acx:lang>Diventa socio!</acx:lang></a> </li>
+          <li class="nav-item"> <a class="nav-link" href="https://it-it.facebook.com/pg/Regalami-un-sorriso-ETS-189377806523/community/"><img src="images/FB-f-Logo__blue_29.png" class="img-fluid" alt="<acx:lang>Facebook</acx:lang>"></a></li>
+        </ul>
+      </acx:else_logon>
+    </div>
+  </div>
+</nav>

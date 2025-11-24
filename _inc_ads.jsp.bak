@@ -1,0 +1,52 @@
+<%@ taglib uri="/WEB-INF/acxent.tld" prefix="acx" %>
+<p><span style="font-weight: bold;color: darkred;">ATTENZIONE ! PUBBLICITA' GOOGLE</span>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  
+  <!-- Adattabile -->
+  <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1616750795635234"
+     data-ad-slot="6418542698"
+     data-ad-format="auto"></ins></p>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+<script>
+    $(document).ready(function() {
+        function removeGoogleAutoPlacedAds() {
+            if ($(window).width() < 768) {
+                $('.google-auto-placed').each(function() {
+                    $(this).hide();
+                    // Per rimuovere completamente l'elemento dal DOM, usa:
+                    // $(this).remove();
+                });
+            }
+        }
+        function removeGoogleAutoPlacedClass() {
+            if ($(window).width() < 768) {
+                $('.google-auto-placed').each(function() {
+                    $(this).removeClass('google-auto-placed');
+                });
+            }
+        }
+		
+        // Chiama la funzione immediatamente dopo il caricamento del DOM
+        removeGoogleAutoPlacedAds();
+	//	removeGoogleAutoPlacedClass();
+
+        // Osserva le modifiche nel DOM per rilevare nuovi annunci aggiunti dinamicamente
+        var observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.addedNodes.length > 0) {
+                    removeGoogleAutoPlacedAds();
+				//	removeGoogleAutoPlacedClass();
+                }
+            });
+        });
+
+        // Configura l'osservatore per monitorare tutto il corpo del documento
+        observer.observe(document.body, { childList: true, subtree: true });
+    });
+</script>
+

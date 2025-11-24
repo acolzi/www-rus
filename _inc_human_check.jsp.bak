@@ -1,0 +1,46 @@
+<!-- _inc_human_check.jsp -->
+<%@page contentType="text/html; charset=UTF-8" %>
+<%@ taglib uri="/WEB-INF/acxent.tld" prefix="acx" %>
+<%@ taglib uri="/WEB-INF/art.tld" prefix="art" %>
+<%@ page language="java" import="it.acxent.jsp.*" %>
+<script src="admin/_V4/_js/_acxent.js"></script>
+<script src="human/abl-human.js"></script>
+<jsp:useBean id="attivita" class="it.acxent.cc.Attivita" type="it.acxent.cc.Attivita" scope="session">
+</jsp:useBean>
+<jsp:useBean id="utenteLogon" class="it.acxent.anag.Users" type="it.acxent.anag.Users" scope="session">
+</jsp:useBean>
+<jsp:useBean id="msg" class="java.lang.String" type="java.lang.String" scope="request">
+</jsp:useBean>
+<jsp:useBean id="logon" class="java.lang.String" type="java.lang.String" scope="request">
+</jsp:useBean>
+<jsp:useBean id="cart" scope="session" type="it.acxent.cart.Cart" class="it.acxent.cart.Cart">
+</jsp:useBean>
+<jsp:useBean id="cartStatus" scope="request" type="it.acxent.cart.CartStatus" class="it.acxent.cart.CartStatus">
+</jsp:useBean>
+<jsp:useBean id="lang" class="java.lang.String" type="java.lang.String" scope="session">
+</jsp:useBean>
+<jsp:useBean id="df" class="it.acxent.util.SimpleDateFormat" scope="request" type="it.acxent.util.SimpleDateFormat">
+</jsp:useBean>
+<%String hid=request.getParameter("hid");%>
+<%String hokpage=request.getParameter("hokpage");%>
+<%String httl=request.getParameter("httl");%>
+
+<form name="hkForm" id="hkForm">
+  <input type="hidden" id="cmd"  name="cmd" value="sendChallenge">
+  <input type="hidden" id="hid"  name="hid" value="<%=hid%>">
+  <input type="hidden" id="hokpage"  name="hokpage" value="<%=hokpage%>">
+  <input type="hidden" id="httl"  name="httl" value="<%=httl%>">
+  <h3 class="subtitle">
+    Controllo Se Sei Un Umano
+  </h3>
+  <div id="_challenge"></div>
+</form>
+<script>
+ $(document).ready(function(){ 
+	
+	 fetchChallenge();
+	//Ab.jspInclude("_inc_human_check_challenge.jsp","categorieMainPage");
+
+							 
+ });
+</script> 

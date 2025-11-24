@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<jsp:useBean id="lang" class="java.lang.String" type="java.lang.String" scope="session" >
+</jsp:useBean><%@page contentType="text/html; charset=UTF-8" %>
+<%@ taglib uri="/WEB-INF/acxent.tld" prefix="acx" %>
+<%@ taglib uri="/WEB-INF/art.tld" prefix="art" %>
+<%@ taglib uri="/WEB-INF/pg.tld" prefix="pg" %>
+<%@ page language="java" import="it.acxent.jsp.Ab" %>
+<%@ taglib uri="/WEB-INF/cc.tld" prefix="cc" %>
+<html lang="<%=lang%>"><!-- InstanceBegin template="/Templates/rus.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<jsp:include page="_inc_lang.jsp"  flush="true"  />
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- [favicon] begin -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+<!-- [favicon] end -->
+<!-- JSP -->
+<jsp:useBean id="_listaLangAtt" class="it.acxent.util.Vectumerator" type="it.acxent.util.Vectumerator" scope="session">
+</jsp:useBean>
+<jsp:useBean id="utenteLogon" class="it.acxent.anag.Users" type="it.acxent.anag.Users" scope="session" >
+</jsp:useBean>
+<jsp:useBean id="msg" class="java.lang.String" type="java.lang.String" scope="request" >
+</jsp:useBean>
+<jsp:useBean id="df" class="it.acxent.util.SimpleDateFormat" scope="request" type="it.acxent.util.SimpleDateFormat">
+</jsp:useBean>
+<jsp:useBean id="cart" scope="session" type=   "it.acxent.cart.Cart" class="it.acxent.cart.Cart" >
+</jsp:useBean>
+<jsp:useBean id="cartStatus" scope="request" type="it.acxent.cart.CartStatus" class="it.acxent.cart.CartStatus" >
+</jsp:useBean>
+<jsp:useBean id="CR" scope="request" type="it.acxent.pg.FotoCR" class="it.acxent.pg.FotoCR" >
+</jsp:useBean>
+<cc:attivita/>
+<jsp:useBean id="attivita" class="it.acxent.cc.Attivita" type="it.acxent.cc.Attivita" scope="session">
+</jsp:useBean>
+<!-- InstanceBeginEditable name="Bean" -->
+<%@ taglib uri="/WEB-INF/news.tld" prefix="news" %>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Regalami Un Sorriso ETS - Correndo, sognando e... lottando - Cookies</title>
+<!-- InstanceEndEditable -->
+
+<!-- Bootstrap core CSS -->
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- FontAwesome Icons -->
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<!-- Roboto Font -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="css/custom-style.css" rel="stylesheet">
+<!-- Css Datepicker -->
+<link href="addons/datepicker/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet">
+<link  rel="stylesheet"  href='admin/_V4/_css/ajaxLoading.css'>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+	<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"Questo sito o gli strumenti terzi da questo utilizzati si avvalgono di cookie necessari al funzionamento ed utili alle finalità illustrate nella cookie policy. Se vuoi saperne di più o negare il consenso a tutti o ad alcuni cookie, consulta la cookie policy. Chiudendo questo banner, scorrendo questa pagina, cliccando su un link o proseguendo la navigazione in altra maniera, acconsenti all'uso dei cookie.","dismiss":"Accetto","learnMore":"Cookie Policy","link":"https://www.regalamiunsorriso.it/privacy.html","theme":"dark-bottom"};
+</script>
+<script type="text/javascript" src="js/cookieconsent.min.js"></script>
+<!-- End Cookie Consent plugin -->
+<jsp:include page="_inc_head.jsp" flush="true" />
+</head>
+<body>
+<!-- Page Content -->
+<!-- InstanceBeginEditable name="main" -->
+  <jsp:include page="_inc_header.jsp"  flush="true" >
+  	<jsp:param name="menuAttivo" value="privacy"/>
+  </jsp:include>
+<div class="container my-3">
+  <div class="row">
+    <div class="col-lg-12 my-4">
+      <h1 class="my-3">INFORMATIVA SUI COOKIES IN MATERIA DI PROTEZIONE DEI DATI PERSONALI AI SENSI DELL'ART. 13 D.LGS N. 196/2003</h1>
+      <div class="row">
+        <div class="col-lg-12 col-xs-12">
+          <div>
+            <div>
+              <p>In osservanza di quanto previsto dagli artt. 13 e 122 del D.lgs 30 giugno 2003, nonche' da quanto previsto dal Provvedimento generale del Garante privacy dell.8 maggio 2014, si informa gli utenti dei siti internet, da cui questo documento viene richiamato, della tipologia di cookie dagli stessi utilizzati e delle finalità perseguite con le informazioni acquisite, fornendo altresì le indicazioni per procedere alla selezione/deselezione dei singoli cookie.</p>
+              <h2>COSA SONO I COOKIES E PER QUALI FINALIT&Agrave;. POSSONO ESSERE UTILIZZATI</h2>
+              <p>Un "cookie" è un piccolo file di testo creato da alcuni siti web sul computer dell.utente al momento in cui questo accede ad un determinato sito, con lo scopo di immagazzinare e trasportare informazioni. I cookie sono inviati da un server web (che è il computer sul quale è in esecuzione il sito web visitato) al browser dell.utente (Internet Explorer, Mozilla Firefox, Google Chrome, ecc.) e memorizzati sul computer di quest.ultimo; vengono, quindi, re-inviati al sito web al momento delle visite successive.<br>
+                Alcune operazioni non potrebbero essere compiute senza l'uso dei cookie, che, in alcuni casi, sono quindi tecnicamente necessari. In altri casi il sito utilizza cookie per facilitare e agevolare la navigazione da parte dell.utente o per consentire a questi di usufruire di servizi specificamente richiesti.<br>
+                I cookie possono rimanere nel sistema anche per lunghi periodi e possono contenere anche un codice identificativo unico. Ciò consente ai siti che li utilizzano di tenere traccia della navigazione dell'utente all'interno del sito stesso, per finalità statistiche o pubblicitarie, per creare cioè un profilo personalizzato dell'utente a partire dalle pagine che lo stesso ha visitato e mostrargli e/o inviargli quindi pubblicità mirate (c.d. Behavioural Advertising).</p>
+              <h2>QUALI COOKIE SONO UTILIZZATI E PER QUALI FINALIT&Agrave;.</h2>
+              <p>I siti web da cui ci siamo stati indicati utilizzano diversi tipi di cookie tecnici, ma non profilanti.<br>
+                Il Titolare, seguendo le indicazioni fornite dall.Autorità Garante nel provvedimento generale dell.8 maggio 2014, riporta di seguito le specifiche categorie di cookie adoperati, la finalità e la conseguenza che deriva dalla loro deselezione:
+             <table class="table">
+  <thead class="thead-light">
+  <tr>
+                  <th>TIPOLOGIA</th>
+                  <th>FINALIT&Agrave;</th>
+                  <th>TEMPO DI CONSERVAZIONE</th>
+                  <th>CONSEGUENZA IN CASO DI DESELEZIONE</th>
+                </tr>
+                </thead>
+                <tr>
+                  <td>Tecnici</td>
+                  <td>Gestione del sito web e consentire la sua normale navigazione e fruizione</td>
+                  <td>Sessione di navigazione</td>
+                  <td>Non sarebbe possibile procedere nella navigazione trattandosi di cookie strettamente necessari, per cui non e' possibile la loro disattivazione</td>
+                </tr>
+                <tr>
+                  <td>Cookie analytics</td>
+                  <td>Raccogliere informazioni in forma aggregata sulla navigazione da parte degli utenti per ottimizzare l'esperienza di navigazione e i servizi stessi.</td>
+                  <td>2 anni</td>
+                  <td>Non sarebbe piu' possibile per il Titolare acquisire le informazioni aggregate</td>
+                </tr>
+                <tr>
+                  <td>Cookie di Sessione</td>
+                  <td>Cookie di sessione del framework utilizzato</td>
+                  <td>Durata della sessione (chiusura volontaria dell'applicazione) o chiusura del browser</td>
+                  <td>Non sarebbe possibile consentire l'esplorazione sicura ed efficiente del sito</td>
+                </tr>
+              </table>
+              <h2>COOKIE DI TERZE PARTI</h2>
+              <p>Sui siti web di riferimento sono operativi anche cookie di terzi parti, ossia cookie creati da un sito web diverso da quello che l.utente sta attualmente visitando.<br>
+              In base a quanto previsto dal provvedimento del garante privacy dell.8 maggio 2014, il Titolare è tenuto, a fornire il link aggiornato alle informative e ai moduli di consenso delle terze parti con cui sono stati stipulati appositi accordi per l.installazione di cookie tramite i propri siti.
+              I cookie di terze parti sono di tipo anonimo.<br>
+              E. previsto l.uso di cookie di terze parti di tipo anonimo; tali cookie permettono di raccogliere e registrare, in modo anonimo, informazioni sulle pagine di ogni singolo sito consultate, ma non consentono di identificare il visitatore, e non sono in alcun modo combinati con altre informazioni. Tali dati sono utilizzati esclusivamente per tracciare ed esaminare l.utilizzo dei siti da parte degli utenti, compilare statistiche sulla base di informazioni raccolte in forma anonima e mediante l.utilizzo di dati in forma aggregata.<br>
+              In particolare, si informano gli utenti che il servizio di analisi web che rilasciano cookie utilizzato dal titolare è "Google Analytics", di seguito descritto.<br>
+              Google Analytics è un servizio di analisi web fornito da Google, Inc. ("Google") che utilizza dei "cookies", che vengono depositati sul computer dell.utente per consentire al sito web visitato di analizzare come gli utenti lo utilizzano. Le informazioni generate dal cookie sull.utilizzo del sito web visitato da parte dell.utente (compreso l. indirizzo IP) verranno trasmesse a Google, e depositate presso i server di Google negli Stati Uniti. Google utilizzerà queste informazioni allo scopo di tracciare ed esaminare l.utilizzo del sito web da parte dell.utente, compilare report sulle attività del sito web per gli operatori del sito e fornire altri servizi relativi alle attività del sito web e all.utilizzo di Internet. Google può anche trasferire queste informazioni a terzi ove ciò sia imposto dalla legge o laddove tali terzi trattino le suddette informazioni per conto di Google. Google non assocerà gli indirizzi IP dell.utente a nessun altro dato posseduto da Google. L.utente può, in qualsiasi momento, rifiutarsi di usare i cookies selezionando l.impostazione appropriata sul proprio browser.<br>
+              Per consultare l'informativa privacy della società Google relativa al servizio Google Analytics, nonché esprimere il proprio consenso all.utilizzo dei suddetti cookies, si rinvia al sito Internet <a href="http://www.google.com/intl/en/analytics/privacyoverview.html">http://www.google.com/intl/en/analytics/privacyoverview.html</a>.<br>
+              <p>Si comunica inoltre agli utenti che un ulteriore servizio presente sui propri siti che rilascia cookies di terze parti è il servizio di Google Maps. Le mappe interattive fornite da Google maps consentono agli utenti che navigano sul sito di ricevere informazioni dettagliate sulla localizzazione della società. Google maps fa uso di differenti cookies, ai seguenti link è possibile trovare la privacy policy combinata di Google, che comprende informazioni sui cookies che Google Maps può installare sul computer o sul dispositivo mobile dell.utente: </p>
+              <p> <a href="http://www.google.si/policies/technologies/cookies/">http://www.google.si/policies/technologies/cookies/</a> <br>
+                o<br>
+                <a href="http://www.google.co.uk/intl/en-GB/policies/">http://www.google.co.uk/intl/en-GB/policies/</a></p>
+              <p>Infine, si informa che nel sito internet possono essere incorporati video presenti su YouTube. Questi video, quando visionati, impostano cookies di terze parti sul computer o sul dispositivo mobile dell.utente, appartenenti al dominio di YouTube.  La finalità di questi cookies e' descritta nell'informativa per la privacy di Google disponibile al seguente link: <a href="https://www.google.it/intl/it/policies/technologies/cookies/">https://www.google.it/intl/it/policies/technologies/cookies/</a>.<br>
+                La disattivazione di questi cookies interromperà le funzioni offerte da queste terze parti.</p>
+              <h2>SOCIAL BUTTONS</h2>
+              <p>Sul sito web potrebbero essere presenti dei particolari "pulsanti" (denominati .social buttons/widgets.) che raffigurano le icone di social network (esempio, Facebook, etc.) e di ulteriori siti web.<br>
+                Detti bottoni consentono agli utenti che stanno navigando sui siti di interagire con un "click" direttamente con i social network e gli altri siti web ivi raffigurati.<br>
+                In tal caso il social network e gli altri siti web acquisiscono i dati relativi alla visita dell.utente, mentre il Titolare non condividerà alcuna informazione di navigazione o dato dell.utente acquisiti attraverso il proprio sito con i social network e gli altri siti web accessibili grazie ai Social buttons/widgets.</p>
+              <h2>MODALIT&Agrave; DEL TRATTAMENTO</h2>
+              <p>Il trattamento dei dati è eseguito attraverso supporti informatici e telematici ad opera di soggetti interni appositamente incaricati. I dati sono conservati in archivi elettronici e con piena assicurazione delle misure di sicurezza minime previste dal legislatore.</p>
+              <h2>COMUNICAZIONE E DIFFUSIONE</h2>
+              <p>I dati raccolti non saranno oggetto di divulgazione e di diffusione.<br>
+                La comunicazione a terzi, diversi dal Titolare, dai responsabili, interni ma anche esterni alla struttura aziendale, e dagli incaricati al trattamento individuati e nominati ex artt. 29 e 30 del D.lgs. n. 196/2003 e s.m.i., è prevista ove necessaria per le finalità di cui sopra, a soggetti terzi (quali società di fornitura e assistenza informatica che garantiscono il corretto funzionamento del portale) impegnate nel corretto e regolare perseguimento delle finalità descritte. In ogni caso il trattamento da parte di soggetti terzi avverrà secondo correttezza e nel rispetto delle disposizioni di legge vigenti.</p>
+              <h2>DIRITTI DELL'INTERESSATO</h2>
+              <p>L'interessato potra' far valere i propri diritti come espressi dall'artt. 7, 8, 9 e 10 del D.lgs. 30 giugno 2003 n. 196, rivolgendosi al titolare del trattamento. In particolare secondo l'art. 7 l'interessato potrà ottenere la conferma dell'esistenza o meno di dati personali che lo riguardano, anche se non ancora registrati, e la loro comunicazione in forma intelligibile.<br>
+                L'interessato ha diritto di ottenere l'indicazione: a) dell'origine dei dati personali; b) delle finalità e modalità del trattamento; c) della logica applicata in caso di trattamento effettuato con l'ausilio di strumenti elettronici; d) degli estremi identificativi del titolare, dei responsabili e del rappresentante designato ai sensi dell'articolo 5, comma 2; e) dei soggetti o delle categorie di soggetti ai quali i dati personali possono essere comunicati o che possono venirne a conoscenza in qualità di rappresentante designato nel territorio dello Stato, di responsabili o incaricati. L'interessato ha diritto di ottenere: a) l'aggiornamento, la rettificazione ovvero, quando vi ha interesse, l'integrazione dei dati; b) la cancellazione, la trasformazione in forma anonima o il blocco dei dati trattati in violazione di legge, compresi quelli di cui non è necessaria la conservazione in relazione agli scopi per i quali i dati sono stati raccolti o successivamente trattati; c) l'attestazione che le operazioni di cui alle lettere a) e b) sono state portate a conoscenza, anche per quanto riguarda il loro contenuto, di coloro ai quali i dati sono stati comunicati o diffusi, eccettuato il caso in cui tale adempimento si rivela impossibile o comporta un impiego di mezzi manifestamente sproporzionato rispetto al diritto tutelato. L'interessato ha diritto di opporsi, in tutto o in parte: a) per motivi legittimi al trattamento dei dati personali che lo riguardano, ancorché pertinenti allo scopo della raccolta; b) al trattamento di dati personali che lo riguardano a fini di invio di materiale pubblicitario o di vendita diretta o per il compimento di ricerche di mercato o di comunicazione commerciale.</p>
+              <h2>TITOLARE E RESPONSABILE</h2>
+              <p>Il Titolare e' il Presidente della ETS REGALAMI UN SORRISO <strong>Piero Giacomelli</strong>, Via Torquato Tasso, 23/C 59100 Prato PO<br>
+                Un elenco aggiornato dei responsabili, nominati dal Titolare ai sensi dell.art. 29 d.lgs. 196/2003, è disponibile presso la sede legale del Titolare.</p>
+              <h2>TEMPI DI CONSERVAZIONE</h2>
+              <p>I dati sono conservati per il tempo indicato nella tabella ,di cui sopra, nel presente documento, e comunque finché non venga espressamente esercitato il diritto di opposizione da parte dell'interessato.</p>
+              <h2>DESELEZIONE E ATTIVAZIONE DEI COOKIE</h2>
+              <p>Accedendo ai siti e superando il banner iniziale contenente l.informativa breve, l.utente ha prestato il proprio consenso espresso all.utilizzo dei cookie tecnici espressamente indicati nel presente documento.<br>
+                La selezione/deselezione dei singoli cookie potrà avvenire liberamente tramite il proprio browser (selezionando il menu impostazioni, cliccando sulle opzioni internet, aprendo la scheda relativa alla privacy e scegliendo il desiderato livello di blocco cookie).            </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.container --> <!-- InstanceEndEditable -->
+
+<!-- Footer -->
+ <jsp:include page="_inc_footer.jsp" flush="true" />
+
+<script>
+	$('#datepicker-sport').datepicker({
+    language: "it"
+});
+	$('#datepicker-eventi').datepicker({
+    language: "it"
+});
+		
+	</script>
+	<!-- InstanceBeginEditable name="lastStuff" -->
+<!-- InstanceEndEditable -->
+<div class="modal-loading"></div>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- TemplateInfo codeOutsideHTMLIsLocked="true" -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- [favicon] begin -->
+<link rel="shortcut icon" type="imrage/x-icon" href="../images/favicon.ico"/>
+<link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+<!-- [favicon] end -->
+
+
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Regalami Un Sorriso ONLUS - Correndo, sognando e... lottando</title>
+<!-- TemplateEndEditable -->
+
+<!-- Bootstrap core CSS -->
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- FontAwesome Icons -->
+<link rel="stylesheet" href="../css/font-awesome.min.css">
+<!-- Roboto Font -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="../css/custom-style.css" rel="stylesheet">
+<!-- Css Datepicker -->
+<link href="../addons/datepicker/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet">
+
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+
+	<?php include('_inc_header.jsp');?>
+
+<!-- Page Content -->
+<!-- TemplateBeginEditable name="main" -->
+<!-- TemplateEndEditable -->
+
+<!-- Footer -->
+
+	<?php include('_inc_footer.jsp');?>
+<!-- Bootstrap core JavaScript --> 
+
+<script src="../vendor/jquery/jquery.min.js"></script> 
+<script src="../vendor/popper/popper.min.js"></script> 
+<script src="../addons/datepicker/js/bootstrap-datepicker.min.js"></script> 
+<script src="../addons/datepicker/locales/bootstrap-datepicker.it.min.js"></script> 
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script> 
+<script>
+	$('#datepicker-sport').datepicker({
+    language: "it"
+});
+	$('#datepicker-eventi').datepicker({
+    language: "it"
+});
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<%@page contentType="text/html; charset=UTF-8" %>
+<%@ taglib uri="/WEB-INF/acxent.tld" prefix="acx" %>
+<%@ page language="java" import="com.ablia.jsp.*" %>
+<jsp:useBean id="RI" class="com.ablia.util.ReturnItem" type="com.ablia.util.ReturnItem" scope="request" ></jsp:useBean>
+<jsp:useBean id="list" scope="request" class="com.ablia.util.Vectumerator" type="com.ablia.util.Vectumerator"></jsp:useBean>
+<input name="<%=RI.getDivList()%>_tnr" id="<%=RI.getDivList()%>_tnr" type="hidden" value="<%=list.getTotNumberFetchedRecord()%>">
+<!-- TemplateBeginEditable name="bean" -->
+<jsp:useBean id="CR" class="com.ablia.pkg.TheBeanCR" type="com.ablia.pkg.TheBeanCR" scope="request" >
+</jsp:useBean>
+<!-- TemplateEndEditable --><ab:if_logon_ok>
+<div id="stRow"><!-- TemplateBeginEditable name="list" -->
+  <ab:whilevec  rowbeanclass="com.ablia.pkg.TheBean"  vectumerator="list">
+    <%RI.setRiValues("");
+RI.addRiValues(rowBean.getId_users());
+RI.addRiValues(rowBean.getDescrizioneCompleta());
+%>
+    <%=Ab.inputAjSearchDiv(list.getIndex(),RI.getSelectedKey(),RI.getDivList(),list.getIndex()+"-"+ rowBean.getDescrizione())%> </ab:whilevec>
+  <!-- TemplateEndEditable --></div>
+</ab:if_logon_ok>
+<ab:else_logon><div id="stRow"><p>ATTENZIONE! Sessione scaduta.</p></div></ab:else_logon>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<%@page contentType="text/html; charset=UTF-8" %>
+<%@ taglib uri="/WEB-INF/acxent.tld" prefix="acx" %>
+<%@ taglib uri="/WEB-INF/art.tld" prefix="art" %>
+<%@ taglib uri="/WEB-INF/pg.tld" prefix="pg" %>
+<%@ page language="java" import="it.acxent.jsp.Ab" %>
+<%@ taglib uri="/WEB-INF/cc.tld" prefix="cc" %>
+<html lang="<%=lang%>"><!-- InstanceBegin template="/Templates/rus.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<jsp:include page="_inc_lang.jsp"  flush="true"  />
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- [favicon] begin -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+<!-- [favicon] end -->
+<!-- JSP -->
+<jsp:useBean id="_listaLangAtt" class="it.acxent.util.Vectumerator" type="it.acxent.util.Vectumerator" scope="session">
+</jsp:useBean>
+<jsp:useBean id="utenteLogon" class="it.acxent.anag.Users" type="it.acxent.anag.Users" scope="session" >
+</jsp:useBean>
+<jsp:useBean id="msg" class="java.lang.String" type="java.lang.String" scope="request" >
+</jsp:useBean>
+<jsp:useBean id="df" class="it.acxent.util.SimpleDateFormat" scope="request" type="it.acxent.util.SimpleDateFormat">
+</jsp:useBean>
+<jsp:useBean id="cart" scope="session" type=   "it.acxent.cart.Cart" class="it.acxent.cart.Cart" >
+</jsp:useBean>
+<jsp:useBean id="cartStatus" scope="request" type="it.acxent.cart.CartStatus" class="it.acxent.cart.CartStatus" >
+</jsp:useBean>
+<jsp:useBean id="CR" scope="request" type="it.acxent.pg.FotoCR" class="it.acxent.pg.FotoCR" >
+</jsp:useBean>
+<cc:attivita/>
+<jsp:useBean id="attivita" class="it.acxent.cc.Attivita" type="it.acxent.cc.Attivita" scope="session">
+</jsp:useBean>
+<!-- InstanceBeginEditable name="Bean" -->
+<%@ taglib uri="/WEB-INF/news.tld" prefix="news" %>
+ <pg:caricagara id_tipoGara="1" nomelista="listFS"></pg:caricagara>
+  <pg:caricagara id_tipoGara="2" nomelista="listFE"></pg:caricagara>
+<jsp:useBean id="listFS" scope="request" class="it.acxent.util.Vectumerator" type="it.acxent.util.Vectumerator">
+</jsp:useBean>
+<jsp:useBean id="listFE" scope="request" class="it.acxent.util.Vectumerator" type="it.acxent.util.Vectumerator">
+</jsp:useBean>
+  <pg:caricatipogara id_tipoGaraPadre="1" nomelista="listaTipoGaraSport"></pg:caricatipogara>
+  <pg:caricatipogara id_tipoGaraPadre="2" nomelista="listaTipoGaraEventi"></pg:caricatipogara>
+
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="doctitle" -->
+<title><acx:lang>Regalami Un Sorriso ETS - Correndo, sognando e... lottando</acx:lang></title>
+<!-- InstanceEndEditable -->
+
+<!-- Bootstrap core CSS -->
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- FontAwesome Icons -->
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<!-- Roboto Font -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="css/custom-style.css" rel="stylesheet">
+<!-- Css Datepicker -->
+<link href="addons/datepicker/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet">
+<link rel="stylesheet" href="admin/_V4/_css/ajaxLoading.css">
+<!-- InstanceBeginEditable name="head" -->
+<!-- Custom styles for home -->
+<link href="css/home.css" rel="stylesheet">
+<!-- InstanceEndEditable -->
+	<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"Questo sito o gli strumenti terzi da questo utilizzati si avvalgono di cookie necessari al funzionamento ed utili alle finalità illustrate nella cookie policy. Se vuoi saperne di più o negare il consenso a tutti o ad alcuni cookie, consulta la cookie policy. Chiudendo questo banner, scorrendo questa pagina, cliccando su un link o proseguendo la navigazione in altra maniera, acconsenti all'uso dei cookie.","dismiss":"Accetto","learnMore":"Cookie Policy","link":"https://www.regalamiunsorriso.it/privacy.html","theme":"dark-bottom"};
+</script>
+<script type="text/javascript" src="js/cookieconsent.min.js"></script>
+<!-- End Cookie Consent plugin -->
+<jsp:include page="_inc_head.jsp" flush="true" />
+</head>
+<body>
+<!-- Page Content -->
+<!-- InstanceBeginEditable name="main" -->
+  <jsp:include page="_inc_header.jsp"  flush="true" >
+  	<jsp:param name="menuAttivo" value="home"/>
+  </jsp:include>
+<header><br></header>
+<div class="container">
+  
+ 
+  <!-- Marketing Icons Section -->
+  <div class="row mb-5">
+    <div class="col-lg-6">
+      <h1 class="my-4 text-uppercase"><acx:lang>Foto Sport</acx:lang></h1>
+      <!-- Form ricerca sport -->
+      
+      <form name="frmFS" action="Gara.abl" id="frmFS" class="form-giallo" onsubmit="return searchFS()">
+        <input type="hidden" name="flgTipoEvento" id="flgTipoEvento" value="0" />
+        <input type="hidden" name="cmd" id="cmd" value="searchIndex" />
+          <input type="hidden" name="pageNumberFS" id="pageNumberFS" value="<%=CR.getPageNumberFS()%>" />
+        <div class="form-row">
+          <div class="form-group col-3">
+            <label for="fmsport" class="sr-only"><acx:lang>Sport</acx:lang></label>
+            <select class="custom-select form-control form-control-sm mb-0" id="id_tipoGaraFS" name="id_tipoGaraFS" placeholder="<acx:lang>sport</acx:lang>" onchange="searchFS()">
+              <acx:optionvec  boundcolumn="id_tipoGara" desccolumn="descrizione" vectumerator="listaTipoGaraSport" value="<%=CR.getId_puntoFoto()%>"><acx:lang>Sport</acx:lang></acx:optionvec>
+            </select>
+          </div>
+          <div class="form-group col-3">
+            <label for="fmlocalita" class="sr-only"><acx:lang>Località</acx:lang></label>
+            <div class="input-group">
+              <input name="localita" type="text" class="form-control form-control-sm mb-0" id="localita" placeholder="<acx:lang>località</acx:lang>" value="<%=CR.getLocalitaFS()%>" aria-describedby="basic-addon1" aria-label="Data">
+              <span class="input-group-addon" id="basic-addon1"><i class="fa fa-map-marker" aria-hidden="true"></i></span> </div>
+          </div>
+          <div class="form-group col-4">
+            <label for="fmdata" class="sr-only"><acx:lang>Mese</acx:lang></label>
+            <div class="input-group">
+              <select name="flgMeseFS" id="flgMeseFS" onchange="searchFS()" class="custom-select form-control form-control-sm mb-0">
+                <acx:optionflg  boundcolumn="flgMeseFS" valuelist="0,1,2,3,4,5,6,7,8,9,10,11,12"> </acx:optionflg>
+              </select>
+            </div>
+          </div>
+          <div class="form-group col-2">
+            <label for="fmdata" class="sr-only"><acx:lang>Anno</acx:lang></label>
+            <div class="input-group">
+              <acx:selectyear name="anno" value="<%=CR.getAnnoFS()%>" start="2017" stop="2018" >
+                <select class="custom-select form-control form-control-sm mb-0" name="annoFS" id="annoFS" onchange="searchFS()">
+                </select>
+              </acx:selectyear>
+            </div>
+          </div>
+          <a href="javascript:searchFS()" class="btn btn-primary btn-block mb-2"><acx:lang>Cerca</acx:lang></a> </div>
+      </form>
+      <!-- -->
+      
+      <div class="text-right my-2"> <a href="javascript:prevPageFS()" type="button" class="btn btn-light"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></a> <a href="javascript:nextPageFS()" type="button" class="btn btn-light"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a> </div>
+      <div class="row" id="gareFS">
+       
+        <input type="hidden" name="totPageNumber_0" id="totPageNumber_0" value="<%=listFS.getTotNumberOfPages()%>">
+          <input type="hidden" name="currentPage_<%=CR.getFlgTipoEvento()%>" id="currentPage_<%=CR.getFlgTipoEvento()%>" value="<%=listFS.getPageNumber()%>">
+        <acx:whilevec rowbeanclass="it.acxent.pg.Gara" vectumerator="listFS">
+          <div class="col-md-6">
+            <div class="card"> <a href="<%=rowBean.getDescrizioneGaraHtml()%>_gara-<%=rowBean.getId_gara()%>---24-1.html">
+              <acx:if_img checkScaled="false"  scaledPrefix="260/" scaledWidth="260"><img class="card-img-top" src="_img/_gara/<%=rowBean.getImgFileName(1) %>"></acx:if_img>
+              <acx:else_img><img class="card-img-top" src="http://placehold.it/700x400" alt=""></acx:else_img>
+              </a>
+              <div class="card-body">
+                <h4 class="card-title"> <a href="<%=rowBean.getDescrizioneGaraHtml()%>_gara-<%=rowBean.getId_gara()%>---24-1.html"><%=rowBean.getDescrizione()%></a> </h4>
+                <p class="card-text"><small><i class="fa fa-calendar" aria-hidden="true"></i>
+                  <acx:dateformat dataformat="dd/MM/yyyy"><%=rowBean.getDataGaraInizio()%></acx:dateformat>
+                  <i class="fa fa-map-marker ml-3" aria-hidden="true"></i> <%=rowBean.getLocalita()%></small></p>
+              </div>
+            </div>
+          </div>
+        </acx:whilevec>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <h1 class="my-4 text-uppercase"><acx:lang>Foto Eventi</acx:lang></h1>
+      <!-- Form ricerca sport -->
+      <form name="frmFE" action="Gara.abl" id="frmFE" class="form-grigio" onsubmit="return searchFE()">
+        <input type="hidden" name="flgTipoEvento" id="flgTipoEvento" value="1" />
+        <input type="hidden" name="cmd" id="cmd" value="searchIndex" />
+         <input type="hidden" name="pageNumberFE" id="pageNumberFE" value="<%=CR.getPageNumberFE()%>" />
+        <div class="form-row">
+          <div class="form-group col-3">
+            <label for="fmsport" class="sr-only"><acx:lang>Sport</acx:lang></label>
+            <select class="custom-select form-control form-control-sm mb-0" id="id_tipoGaraFE" name="id_tipoGaraFE" placeholder="<acx:lang>sport</acx:lang>" onchange="searchFE()">
+              <acx:optionvec  boundcolumn="id_tipoGara" desccolumn="descrizione" vectumerator="listaTipoGaraEventi" value="<%=CR.getId_puntoFoto()%>"><acx:lang>Eventi</acx:lang></acx:optionvec>
+            </select>
+          </div>
+          <div class="form-group col-3">
+            <label for="fmlocalita" class="sr-only"><acx:lang>Località</acx:lang></label>
+            <div class="input-group">
+              <input name="localita" type="text" class="form-control form-control-sm mb-0" id="localita" placeholder="<acx:lang>località</acx:lang>" value="<%=CR.getLocalitaFE()%>" aria-describedby="basic-addon1" aria-label="Data">
+              <span class="input-group-addon" id="basic-addon1"><i class="fa fa-map-marker" aria-hidden="true"></i></span> </div>
+          </div>
+          <div class="form-group col-4">
+            <label for="fmdata" class="sr-only"><acx:lang>Mese</acx:lang></label>
+            <div class="input-group">
+              <select name="flgMeseFE" id="flgMeseFE" onchange="searchFE()" class="custom-select form-control form-control-sm mb-0">
+                <acx:optionflg  boundcolumn="flgMeseFE" valuelist="0,1,2,3,4,5,6,7,8,9,10,11,12"> </acx:optionflg>
+              </select>
+            </div>
+          </div>
+          <div class="form-group col-2">
+            <label for="fmdata" class="sr-only"><acx:lang>Anno</acx:lang></label>
+            <div class="input-group">
+              <acx:selectyear name="anno" value="<%=CR.getAnnoFE()%>" start="2017" stop="2018" >
+                <select class="custom-select form-control form-control-sm mb-0" name="annoFE" id="annoFE" onchange="searchFE()">
+                </select>
+              </acx:selectyear>
+            </div>
+          </div>
+          <a href="javascript:searchFE()" class="btn btn-secondary btn-block mb-2"><acx:lang>Cerca</acx:lang></a> </div>
+      </form>
+      
+      
+      <!-- -->
+      
+      <div class="text-right my-2"> <a href="javascript:prevPageFE()" type="button" class="btn btn-light"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></a> <a href="javascript:nextPageFE()" type="button" class="btn btn-light"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a> </div>
+      <div class="row" id="gareFE">
+      <input type="hidden" name="totPageNumber_1" id="totPageNumber_1" value="<%=listFE.getTotNumberOfPages()%>">
+          <input type="hidden" name="currentPage_<%=CR.getFlgTipoEvento()%>" id="currentPage_<%=CR.getFlgTipoEvento()%>" value="<%=listFE.getPageNumber()%>">
+      
+        <acx:whilevec rowbeanclass="it.acxent.pg.Gara" vectumerator="listFE">
+          <div class="col-md-6">
+            <div class="card"> <a href="<%=rowBean.getDescrizioneGaraHtml()%>_gara-<%=rowBean.getId_gara()%>---24-1.html">
+              <acx:if_img><img class="card-img-top" src="_img/_gara/<%=rowBean.getImgFileName(1) %>"></acx:if_img>
+              <acx:else_img><img class="card-img-top" src="http://placehold.it/700x400" alt=""></acx:else_img>
+              </a>
+              <div class="card-body">
+                <h4 class="card-title"> <a href="<%=rowBean.getDescrizioneGaraHtml()%>_gara-<%=rowBean.getId_gara()%>---24-1.html"><%=rowBean.getDescrizione()%></a> </h4>
+                <p class="card-text"><small><i class="fa fa-calendar" aria-hidden="true"></i>
+                  <acx:dateformat dataformat="dd/MM/yyyy"><%=rowBean.getDataGaraInizio()%></acx:dateformat>
+                  <i class="fa fa-map-marker ml-3" aria-hidden="true"></i> <%=rowBean.getLocalita()%></small></p>
+              </div>
+            </div>
+          </div>
+        </acx:whilevec>
+      </div>
+    </div>
+    <!-- /.row --> 
+    
+  </div>
+</div>
+
+<!-- /.container --> <!-- InstanceEndEditable -->
+
+<!-- Footer -->
+ <jsp:include page="_inc_footer.jsp" flush="true" />
+
+<script>
+	$('#datepicker-sport').datepicker({
+    language: "it"
+});
+	$('#datepicker-eventi').datepicker({
+    language: "it"
+});
+		
+	</script>
+	<!-- InstanceBeginEditable name="lastStuff" --> <!-- InstanceEndEditable -->
+<div class="modal-loading"></div>
+</body>
+<!-- InstanceEnd --></html>

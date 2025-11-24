@@ -1,0 +1,120 @@
+BODY {
+	FONT-SIZE: 94%; MARGIN: 0px; COLOR: #22464f; FONT-FAMILY: verdana, tahoma, helvetica, arial, sans-serif; BACKGROUND-COLOR: #6fbaff
+}
+H1 {
+	FONT-FAMILY: "trebuchet ms", verdana, tahoma, sans-serif
+}
+H2 {
+	FONT-FAMILY: "trebuchet ms", verdana, tahoma, sans-serif
+}
+H3 {
+	FONT-FAMILY: "trebuchet ms", verdana, tahoma, sans-serif
+}
+H1 {
+	MARGIN-TOP: 0.25em; FONT-WEIGHT: bold; FONT-SIZE: 156%
+}
+IMG {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+ACRONYM {
+	CURSOR: help; BORDER-BOTTOM: 1px dotted
+}
+CODE {
+	FONT-SIZE: 95%; FONT-FAMILY: "lucida console", monospace
+}
+DT {
+	FONT-WEIGHT: bold
+}
+DD {
+	PADDING-BOTTOM: 1.5em
+}
+#header {
+	PADDING-RIGHT: 2.5mm; PADDING-LEFT: 4mm; BORDER-LEFT-COLOR: white; MARGIN-BOTTOM: 5mm; PADDING-BOTTOM: 0px; BORDER-TOP-COLOR: white; PADDING-TOP: 0px; BORDER-BOTTOM: white 2px solid; HEIGHT: 3em; BACKGROUND-COLOR: navy; BORDER-RIGHT-COLOR: white
+}
+#header .title {
+	FONT-WEIGHT: bold; FONT-SIZE: 205%; COLOR: #cddbcd; LINE-HEIGHT: 1.5em; FONT-STYLE: italic; TEXT-DECORATION: none
+}
+#header .title SPAN {
+	FONT-WEIGHT: normal; COLOR: white
+}
+#header .menuBar {
+	FONT-SIZE: 87%; RIGHT: 2ex; COLOR: white; POSITION: absolute; TOP: 1.75em
+}
+#header .menuBar A:hover {
+	COLOR: #abc3ac
+}
+#header .menuBar  {
+	PADDING-RIGHT: 2ex; PADDING-LEFT: 1ex; FONT-WEIGHT: bold; COLOR: white; TEXT-DECORATION: none
+}
+#bodyText {
+	PADDING-RIGHT: 1em; PADDING-LEFT: 1em; FONT-SIZE: 95%; PADDING-BOTTOM: 1ex; COLOR: #22464f; LINE-HEIGHT: 1.5em; PADDING-TOP: 0px; TEXT-ALIGN: justify
+}
+#bodyText .title {
+	PADDING-RIGHT: 1em; BORDER-TOP: 1px solid; PADDING-LEFT: 0.5ex; FONT-WEIGHT: bold; PADDING-BOTTOM: 0.5ex; COLOR: #22464f; PADDING-TOP: 0.5ex; BACKGROUND-COLOR: #cddbcd
+}
+#bodyText A {
+	PADDING-RIGHT: 1em; PADDING-LEFT: 0.5ex; BORDER-LEFT-COLOR: navy; BORDER-BOTTOM-COLOR: navy; PADDING-BOTTOM: 1ex; COLOR: #22464f; BORDER-TOP-COLOR: navy; PADDING-TOP: 1ex; TEXT-DECORATION: none; BORDER-RIGHT-COLOR: navy
+}
+#bodyText A:hover {
+	COLOR: navy; TEXT-DECORATION: underline
+}
+#bodyText .boxedDark {
+	BORDER-RIGHT: navy 1px solid; PADDING-RIGHT: 4ex; BORDER-TOP: navy 1px solid; PADDING-LEFT: 4ex; MARGIN-BOTTOM: 1em; PADDING-BOTTOM: 2ex; BORDER-LEFT: navy 1px solid; COLOR: black; PADDING-TOP: 2ex; BORDER-BOTTOM: navy 1px solid
+}
+#bodyText .boxedLight {
+	BORDER-RIGHT: #22464f 1px solid; PADDING-RIGHT: 4ex; BORDER-TOP: #22464f 1px solid; PADDING-LEFT: 4ex; MARGIN-BOTTOM: 1em; PADDING-BOTTOM: 2ex; BORDER-LEFT: #22464f 1px solid; PADDING-TOP: 2ex; BORDER-BOTTOM: #22464f 1px solid; BACKGROUND-COLOR: #cddbcd
+}
+#bodyText .smallfont {
+	
+}
+.smallCaps {
+	FONT-VARIANT: small-caps
+}
+#sideBar {
+	CLEAR: left; FONT-SIZE: 95%; FLOAT: left; WIDTH: 10em; TEXT-ALIGN: left
+}
+#sideBar .menutitle {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 136%; MARGIN-BOTTOM: 5px; PADDING-BOTTOM: 5px; WIDTH: 114px; CURSOR: pointer; COLOR: navy; PADDING-TOP: 5px; BACKGROUND-COLOR: #6fbaff; TEXT-ALIGN: left
+}
+#sideBar .submenu {
+	MARGIN-BOTTOM: 0.5em
+}
+#sideBar A {
+	BORDER-LEFT-COLOR: navy; BORDER-BOTTOM-COLOR: navy; COLOR: #22464f; BORDER-TOP-COLOR: navy; LINE-HEIGHT: 1.25em; TEXT-DECORATION: none; BORDER-RIGHT-COLOR: navy
+}
+.sideBar SPAN {
+	BORDER-LEFT-COLOR: navy; BORDER-BOTTOM-COLOR: navy; COLOR: #22464f; BORDER-TOP-COLOR: navy; LINE-HEIGHT: 1.25em; TEXT-DECORATION: none; BORDER-RIGHT-COLOR: navy
+}
+#sideBar A:hover {
+	COLOR: white
+}
+#sideBar .text {
+	PADDING-RIGHT: 1.5ex; PADDING-LEFT: 1.5ex; PADDING-BOTTOM: 1ex; PADDING-TOP: 1ex; TEXT-ALIGN: justify
+}
+#sideBar .thisPage {
+	FONT-WEIGHT: bold
+}
+#footer {
+	CLEAR: left; PADDING-RIGHT: 4mm; PADDING-LEFT: 4mm; PADDING-BOTTOM: 1ex; COLOR: white; PADDING-TOP: 1ex; BACKGROUND-COLOR: navy
+}
+#footer DIV {
+	FONT-SIZE: 85%; LINE-HEIGHT: 1.25em; TEXT-ALIGN: right
+}
+#footer A {
+	BORDER-LEFT-COLOR: white; COLOR: white; BORDER-TOP-COLOR: white; BORDER-BOTTOM: white 1px solid; TEXT-DECORATION: none; BORDER-RIGHT-COLOR: white
+}
+#footer A:hover {
+	COLOR: navy
+}
+#footer .footerLHS {
+	CLEAR: left; FLOAT: left
+}
+#footer .subFooter {
+	PADDING-RIGHT: 4mm; PADDING-LEFT: 4mm; FONT-SIZE: 85%; PADDING-BOTTOM: 1ex; LINE-HEIGHT: 1.25em; PADDING-TOP: 1ex
+}
+#footer .subFooter A {
+	BORDER-LEFT-COLOR: navy; COLOR: #22464f; BORDER-TOP-COLOR: navy; MARGIN-RIGHT: 1ex; BORDER-BOTTOM: navy 1px solid; TEXT-DECORATION: none; BORDER-RIGHT-COLOR: navy
+}
+#footer .subFooter A:hover {
+	BORDER-LEFT-COLOR: #abc3ac; BORDER-BOTTOM-COLOR: #abc3ac; BORDER-TOP-COLOR: #abc3ac; BORDER-RIGHT-COLOR: #abc3ac
+}

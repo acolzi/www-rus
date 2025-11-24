@@ -1,0 +1,56 @@
+Gentile utente <%=cognome%> <%=nome%> ,
+
+Questo e' un messaggio automatico generato dal server quando risulta che:
+              hai esaurito il numero di foto che puoi condividere.
+	      
+Se questa e' la tua prima registrazione ti e' stato concesso di condividere  una foto di test in bassa risoluzione
+per altre foto in alta risoluzione devi farti socio.
+
+L'accesso all'archivio fotografico e' un servizio riservato ai soli SOCI ONLUS REGALAMI UN SORRISO.
+Condividere le foto non vuol dire acquistare le foto, queste sono destinate ad un uso interno dei soci onlus.
+     
+     Per diventare soci e' previsto un contributo liberale.
+     
+     Con un contributo liberale da 20 euro in poi puoi diventare SOCIO
+     Il socio puo' condividere fino a  1000 foto in un anno.
+     
+Si ricorda che ogni foto ingrandita equivale ad una foto condivisa.
+
+L'iscrizione non e' automatica, i soci debbono spedire la ricevuta a 
+piero@pierogiacomelli.com  oppure al fax 0574 876074
+ed entro 24 ore il vostro account sara' attivato.
+
+Puoi destinare il tuo contributo liberale a :
+
+REGALAMI UN SORRISO ONLUS
+Via Torquato Tasso, 23/C  59100 PRATO
+CODICE FISCALE 92076170486
+
+Puoi scegliere tra i seguenti istituti bancari per effettuare il tuo contributo:
+Ti consigliamo di usare PAYPAL in quanto non ha spese ne oneri di pagamento.
+
+BANCA IFIGEST
+IBAN IT41 Z031 8521 5000 0001 0014 876
+
+CONTO CORRENTE POSTALE  
+NUMERO C/C  89587968
+
+BANCO POSTA 
+IBAN  IT 77H 07601 02800 0000 8958 7968
+
+PAYPAL ( senza spese ne oneri bancari )
+Il pagamento tramite PAYPAL attiva automaticamente l'accesso
+non occorre che l'attestazione del contributo ci sia spedita.
+
+IL CONTRIBUTO DESTINATO ALLE ONLUS PUO' ESSERE PORTATO IN DETRAZIONE NELLA DENUNCIA DEI REDDITI.
+DESTINA IL 5X1000 ALLA ONLUS REGALAMI UN SORRISO CODICE FISCALE 92076170486
+
+Per problemi inerenti la gestione delle password puoi contattare
+l'indirizzo email piero@pierogiacomelli.com o foto.atletica.immagine@gmail.com
+Telefono 0574 876071 
+
+Sei appassionato di sport, di podismo? Cerchi i calendari delle gare?
+Vuoi essere informato sulle ultime notizie del mondo del podismo?
+Visita il forum  http://bb.pierogiacomelli.com
+
+ONLUS REGALAMI UN SORRISO 

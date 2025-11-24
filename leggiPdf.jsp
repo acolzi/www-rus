@@ -1,0 +1,34 @@
+<!DOCTYPE html><jsp:useBean id="lang" class="java.lang.String" type="java.lang.String" scope="session" >
+</jsp:useBean>
+<%@page contentType="text/html; charset=UTF-8" %>
+<%@ taglib uri="/WEB-INF/acxent.tld" prefix="acx" %>
+<%@ taglib uri="/WEB-INF/art.tld" prefix="art" %>
+<%@ taglib uri="/WEB-INF/pg.tld" prefix="pg" %>
+<%@ page language="java" import="it.acxent.jsp.Ab" %>
+<%@ taglib uri="/WEB-INF/cc.tld" prefix="cc" %>
+<html lang="en">
+<head>
+<jsp:useBean id="bean" scope="request" type="it.acxent.news.News" class="it.acxent.news.News" >
+</jsp:useBean>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="css-flipbook/flipbook.style.css">
+<link rel="stylesheet" type="text/css" href="css-flipbook/font-awesome.css">
+<script src="js-flipbook/flipbook.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#container").flipBook({
+            pdfUrl:"_news/_attach/ATLETICA_IMMAGINE_39.pdf?w=1&id=63",
+        });
+
+    })
+</script>
+</head>
+
+<body>
+<div id="container">
+  <p><acx:lang>Real 3D Flipbook has lightbox feature - book can be displayed in the same page with lightbox effect.</acx:lang></p>
+  <p><acx:lang>Click on a book cover to start reading.</acx:lang></p>
+  <img src="images/book2/thumb1.jpg" /> </div>
+</body>
+</html>

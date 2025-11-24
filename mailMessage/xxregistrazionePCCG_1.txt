@@ -1,0 +1,63 @@
+Grazie per esserti registrato a PHOTO WEB SERVER 
+Data modifica record: <%=data%>
+
+Conserva questi dati. Ti serviranno per accedere ai nostri servizi senza dover ricompilare il modulo di registrazione.
+
+Login: <%=login%> 
+Password: <%=pwd%>
+
+I dati anagrafici inseriti sono i seguenti:
+
+Cognome: <%=cognome%>
+Nome: <%=nome%> 
+Città: <%=citta%>  
+Indirizzo: <%=indirizzo%> n. <%=numeroCivico%>
+Telefono: <%=telefono%>  
+E-mail: <%=eMail%>
+Cod. Fiscale: <%=codFisc%>
+Gruppo Sportivo: <%=gruppoSportivo%>
+Motivo Richiesta: <%=motivo%>
+
+Per sicurezza, il tuo login e la tua password non saranno attivi finché non viene verificata l'esattezza dei tuoi dati tramite il link seguente:
+http://www.pierogiacomelli.com/pg/Logon.abl?cmdIU=ckcclnk&controlCode=<%=controlCode%>
+
+
+Questo sito non ha scopo di lucro, se hai apprezzato il mio lavoro, 
+lo reputi valido e desideri manifestare il tuo ringraziamento, 
+ti suggerisco di effettuare un donazione ad una delle seguenti associazioni:
+
+CAUSALE:  CONTRIBUTO FOTO REGALAMI UN SORRISO
+
+A.I.S.M. Associazione Italiana Sclerosi Multipla Sezione di Prato
+ http://www.aism.it 
+Essa interviene sul territorio aiutando i malati di Sclerosi Multipla, con assistenza domiciliare e presso la propria sede.
+AISM Prato via Fra Bartolomeo 92a 59100 Prato
+Unicredit Sede di Prato ABI 03223 CAB 21500 c/c 5030312 - c/c postale 12106548
+IBAN IT15S0322321500000005030312
+
+A.I.L.  Associazione Italiana contro le leucemie-linfomi e mieloma
+ http://www.associazioni.prato.it/ailprato
+Sezione AIL di Prato, Vicolo del Menichino 16  59100  Prato 
+Forniscono assistenza psicologia e domiciliare
+Cassa Risparmio di Prato Ag. Narnali c/c 42080  Abi 06020 Cab 21570 - c/c postale 58359548
+  
+.
+Sei appassionato di sport, di podismo? Cerchi i calendari delle gare? 
+Vuoi essere informato sulle ultime notizie del mondo del podismo? 
+Visita il forum <http://forum.pierogiacomelli.com> 
+
+LA DURATA DELLA PASSWORD E' IMPOSTATA DI DEFAULT SU MESI 1 (UNO) O MASSIMO 5 FOTO 
+CHI DESIDERA CONTINUARE AD USUFRUIRE DEL SERVIZIO FOTO DEVE DOCUMENTARE VIA EMAIL (  piero@pierogiacomelli.com )  
+O VIA FAX  0574 42445 L'AVVENUTO VERSAMENTO AI  BENEFICIARI INDICATI OPPURE  
+ESSERE PARTE ATTIVA DI ASSOCIAZIONE DI VOLONTARIATO, DI BENEFICENZA 
+O CONTRIBUIRE IN QUALCHE MODO ALLA GESTIONE DEL SITO O DEL GRUPPO REGALAMI UN SORRISO.
+SARA' QUINDI POSSIBILE PRELEVARE LE FOTO PER 1 ANNO.
+
+Il Legale Rappresentante di questo sito, Responsabile del Sistema di Trattamento Dati Sig. Giacomelli Piero utilizzera' i dati personali acquisiti solo con modalita' e procedure strettamente necessarie alle finalita' per le quali sono stati raccolti. Per taluni servizi vengono utilizzate societa' e/o addetti da noi autorizzate; quali titolari autonomi che svolgono per ns. conto compiti di natura tecnico-organizzativa, consulenziale nonche' informativa nell'ambito delle finalita' richiamate. 
+Il titolare del trattamento e': PHOTO WEB SERVER di Giacomelli Piero 
+L'elenco di tali soggetti e' disponibile, costantemente aggiornato, presso gli uffici della ns. Sede in Via Botticelli, 27 59100 Prato (PO) dove e' possibile rivolgersi per qualsiasi informazione e/o comunicazione. 
+Il particolare ai sensi degli artt. 7,8,10 e 13 del D,Lgs 196/03, Lei ha il diritto di conoscere quali sono i Suoi dati in ns. possesso e come vengono utilizzati; ha inoltre il diritto di integrare, rettificare o concellare, chiedere il blocco ed eventualmente opporsi al loro trattamento. 
+
+Per problemi inerenti alla gestione password contattare l'indirizzo email piero@pierogiacomelli.com
+
+PHOTO WEB SERVER 

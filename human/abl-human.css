@@ -1,0 +1,13 @@
+/* CSS Document */
+.human-boxed-text {
+  display: inline-block;
+}
+.human-boxed-text span {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 2px;
+  width: 20px;
+  height: 30px;
+  text-align: center;
+  color: black; /* Colore del testo */
+}

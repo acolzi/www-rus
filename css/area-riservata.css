@@ -1,0 +1,122 @@
+/* Sidebar */
+.sidebar-menu .list-group-item:first-child, .sidebar-menu .list-group-item:last-child {
+	border-radius: 0
+}
+.sidebar-menu .list-group {
+	border: 1px solid #eee
+}
+.sidebar-menu .list-group-item {
+	padding: 0.5rem;
+	font-size: 0.9rem;
+	border: 0;
+}
+.sidebar-menu .list-group-item.active {
+	background: none;
+	border: 0;
+	color: #fec100;
+}
+
+
+/* Foto Scaricate*/
+.gallery_elemento {
+	padding: 0 15px 30px
+}
+ @media (min-width:992px) {
+.gallery_elemento {
+ padding: 0 30px 0 10px
+}
+}
+.gallery_box {
+	padding: 5px 0 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	clear: both
+}
+ @media (min-width:768px) {
+.gallery_box {
+ justify-content: flex-start
+}
+}
+.gallery_elemento {
+	list-style: none;
+	box-sizing: border-box;
+	float: left;
+	display: inline-block;
+	vertical-align: top;
+	padding: 0;
+	margin-top: 15px
+}
+@media (min-width:768px) {
+ .gallery_elemento {
+ padding:0 20px 0 0
+}
+}
+.gallery_elemento_contenitore {
+	margin: 0 auto;
+	box-sizing: border-box;
+	width: 157px;
+	display: block
+}
+.gallery_elemento_contenitore .gallery_elemento_infoaggiuntive {
+	opacity: 1
+}
+@media (min-width:992px) {
+ .gallery_elemento_contenitore {
+ padding:10px;
+ width:200px;
+ display:inherit
+}
+ .gallery_elemento_contenitore .gallery_elemento_infoaggiuntive {
+ opacity:0
+}
+}
+@media (min-width:992px) {
+ .gallery_elemento_contenitore {
+ border:1px solid transparent
+}
+ .gallery_elemento_contenitore:hover {
+ background-color:#f7f7f7;
+ border:1px solid #e2e2e2
+}
+ .gallery_elemento_contenitore:hover .gallery_elemento_infoaggiuntive {
+ opacity:1
+}
+}
+.gallery_elemento_immagine {
+	box-sizing: content-box;
+	background-color: #eee;
+	border: 1px solid #ccc;
+	position: relative;
+	vertical-align: middle;
+	text-align: center;
+	display: table-cell;
+	height: 155px;
+	width: 155px
+}
+@media (min-width:992px) {
+ .gallery_elemento_immagine {
+ height:176px;
+ width:176px
+}
+}
+.gallery_immagineOrizzontale {
+	width: 155px
+}
+@media (min-width:992px) {
+ .gallery_immagineOrizzontale {
+ width:176px
+}
+}
+.gallery_immagineVerticale {
+	height: 155px
+}
+@media (min-width:992px) {
+ .gallery_immagineVerticale {
+ height:176px
+}
+}
+.gallery_elemento_infoaggiuntive {
+	opacity: 0
+}

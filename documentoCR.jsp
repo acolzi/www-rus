@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<jsp:useBean id="lang" class="java.lang.String" type="java.lang.String" scope="session" >
+</jsp:useBean><%@page contentType="text/html; charset=UTF-8" %>
+<%@ taglib uri="/WEB-INF/acxent.tld" prefix="acx" %>
+<%@ taglib uri="/WEB-INF/art.tld" prefix="art" %>
+<%@ taglib uri="/WEB-INF/pg.tld" prefix="pg" %>
+<%@ taglib uri="/WEB-INF/cc.tld" prefix="cc" %>
+<%@ page language="java" import="it.acxent.jsp.Ab" %>
+<%@ taglib uri="/WEB-INF/cc.tld" prefix="cc" %>
+<html lang="<%=lang%>"><!-- InstanceBegin template="/Templates/rus.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<jsp:include page="_inc_lang.jsp"  flush="true"  />
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- [favicon] begin -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+<!-- [favicon] end -->
+<!-- JSP -->
+<jsp:useBean id="_listaLangAtt" class="it.acxent.util.Vectumerator" type="it.acxent.util.Vectumerator" scope="session">
+</jsp:useBean>
+<jsp:useBean id="utenteLogon" class="it.acxent.anag.Users" type="it.acxent.anag.Users" scope="session" >
+</jsp:useBean>
+<jsp:useBean id="msg" class="java.lang.String" type="java.lang.String" scope="request" >
+</jsp:useBean>
+<jsp:useBean id="df" class="it.acxent.util.SimpleDateFormat" scope="request" type="it.acxent.util.SimpleDateFormat">
+</jsp:useBean>
+<jsp:useBean id="cart" scope="session" type=   "it.acxent.cart.Cart" class="it.acxent.cart.Cart" >
+</jsp:useBean>
+<jsp:useBean id="cartStatus" scope="request" type="it.acxent.cart.CartStatus" class="it.acxent.cart.CartStatus" >
+</jsp:useBean>
+<jsp:useBean id="CR" scope="request" type="it.acxent.pg.FotoCR" class="it.acxent.pg.FotoCR" >
+</jsp:useBean>
+<cc:attivita/>
+<jsp:useBean id="attivita" class="it.acxent.cc.Attivita" type="it.acxent.cc.Attivita" scope="session">
+</jsp:useBean>
+<!-- InstanceBeginEditable name="Bean" -->
+<%@ taglib uri="/WEB-INF/news.tld" prefix="news" %>
+<jsp:useBean id="user" class="it.acxent.pg.Users" type="it.acxent.pg.Users" scope="request" >
+</jsp:useBean>
+<jsp:useBean id="listRD" scope="request" class="it.acxent.util.Vectumerator" type="it.acxent.util.Vectumerator">
+</jsp:useBean>
+<jsp:useBean id="nf" scope="request" type="java.text.NumberFormat" >
+</jsp:useBean>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="doctitle" -->
+<title><acx:lang>Regalami Un Sorriso ETS - Area Utente</acx:lang></title>
+<!-- InstanceEndEditable -->
+
+<!-- Bootstrap core CSS -->
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- FontAwesome Icons -->
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<!-- Roboto Font -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="css/custom-style.css" rel="stylesheet">
+<!-- Css Datepicker -->
+<link href="addons/datepicker/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet">
+<link rel="stylesheet" href="admin/_V4/_css/ajaxLoading.css">
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+	<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"Questo sito o gli strumenti terzi da questo utilizzati si avvalgono di cookie necessari al funzionamento ed utili alle finalità illustrate nella cookie policy. Se vuoi saperne di più o negare il consenso a tutti o ad alcuni cookie, consulta la cookie policy. Chiudendo questo banner, scorrendo questa pagina, cliccando su un link o proseguendo la navigazione in altra maniera, acconsenti all'uso dei cookie.","dismiss":"Accetto","learnMore":"Cookie Policy","link":"https://www.regalamiunsorriso.it/privacy.html","theme":"dark-bottom"};
+</script>
+<script type="text/javascript" src="js/cookieconsent.min.js"></script>
+<!-- End Cookie Consent plugin -->
+<jsp:include page="_inc_head.jsp" flush="true" />
+</head>
+<body>
+<!-- Page Content -->
+<!-- InstanceBeginEditable name="main" -->
+<acx:if_logon_ok >
+  <jsp:include page="_inc_header.jsp"  flush="true" >
+  <jsp:param name="menuAttivo" value="account"/>
+  </jsp:include>
+  <div class="container my-3">
+    <div class="row">
+      <div class="col-lg-6 my-4">
+        <h1 class="my-3"><acx:lang>Area Utente</acx:lang></h1>
+		        <div class="col-lg-12 my-12"> <a href="index.html" class="btn btn-primary btn-block"><br>
+		           <acx:lang>Visualizza le foto</acx:lang><br>
+		           <br>
+			       </a> </div>
+        <p class="mt-5 mb-4"><acx:lang>Ciao</acx:lang> <strong><%=utenteLogon.getCognomeNome()%></strong><br>
+          <acx:lang>Indirizzo:</acx:lang> <strong><%=user.getIndirizzo()%> <acx:lang>n.</acx:lang> <%=user.getNumeroCivico()%>, <%=user.getCitta()%> <%=user.getCap()%> (<%=user.getProvincia()%>)</strong><br>
+          <acx:lang>Società di appartenenza:</acx:lang> <strong><%=user.getContatto()%> </strong><br>
+          <acx:lang>Telefono:</acx:lang> <strong><%=user.getTelefono()%></strong><br>
+          <acx:lang>Email:</acx:lang> <strong><%=user.getEMail()%></strong><br>
+          <acx:lang>Codice Fiscale:</acx:lang> <strong><%=user.getCodFisc()%></strong><br>
+          <acx:lang>Data Scadenza:</acx:lang> <strong><%=df.format(user.getDataScadenza())%></strong><br>
+          <acx:lang>Num. foto visualizzate/N. foto Max:</acx:lang> <strong><%=user.getNFotoVisual()%>/<%=user.getNFotoMax()%></strong><br>
+          <acx:lang>Num. foto visualizzate oggi:</acx:lang> <strong><%=user.getNFotoVisualOggi()%></strong></p>
+        <p class=""><acx:lang>Verificate che i dati siano corretti. Per variazioni scrivere a</acx:lang> <a href="mailto:foto@pierogiacomelli.com"><acx:lang>foto@pierogiacomelli.com</acx:lang></a> <acx:lang>oppure vai su</acx:lang> <a href="registrazione_utente.html"><acx:lang>Modifica Dati</acx:lang></a> <br>
+          <acx:lang>Attenzione, vale il silenzio assenso sulla correttezza dei dati anagrafica soci.</acx:lang></p>
+        <acx:if wherecondition="<%=user.getDataScadenza()!=null%>">
+          <p class=""><acx:lang>Mancano</acx:lang> <strong><%=user.getGgAScadenza()%> </strong> <acx:lang>giorni alla scadenza.</acx:lang><br>
+          </p>
+			 
+        </acx:if>
+      </div>
+      <div class="col-lg-6 my-4" ">
+        <acx:if wherecondition="<%=user.isDaRinnovare()|| user.getNFotoMax()==1%>">
+          <div class="row">
+            <div class="col-lg-12 my-4"><b> <acx:lang>Il tuo account è scaduto oppure hai raggiunto il numero di foto massimo da scaricare. Per poter scaricare/condividere nuove foto effettua il rinnovo della quota associativa.</acx:lang></b> </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 my-12">
+              <div class="row">
+                <div class="col-lg-12 my-12 "><b><acx:lang>Rinnova tramite Coupon</acx:lang></b><br>
+                  <br>
+                </div>
+                <acx:if wherecondition="<%=user.isDatiPaypalOk()%>">
+                  <div class="col-lg-8 my-12">
+                    <form class="container" name="frmCoupon" id="frmLogin" method="post" action="Logon.abl">
+                      <input type="hidden" name="cmd" id="cmd" />
+                      <input type="hidden" name="act" id="act" />
+                      <input type="hidden" name="cmdIU" id="cmdIU" />
+                      <div class="form-group">
+                        <input name="coupon" type="text" class="form-control form-control-lg rounded-0" id="coupon" maxlength="24">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-lg-4 my-12"> <a href="javascript:inviaCoupon()" class="btn btn-primary btn-block"><acx:lang>Invia Coupon</acx:lang></a> </div>
+                </acx:if>
+                <acx:else>
+                  <div class="col-lg-8 my-12">
+                    <p><em><strong><acx:lang>Attenzione... Per poter rinnovare tramite Coupon, devi completare i tuoi dati di registrazione con tutti i campi obbligatori</acx:lang></strong></em></p>
+                    <a href="registrazione_utente.html" class="btn btn-primary btn-block"><acx:lang>MODIFICA I TUOI DATI</acx:lang></a> </div>
+                </acx:else>
+              </div>
+            </div>
+            <div class="col-lg-12 my-4">
+              <acx:if wherecondition="<%=user.isDatiPaypalOk()%>">
+                <div class="row">
+                  <div class="col-lg-12 my-12 "><b><acx:lang>Rinnova tramite PayPal</acx:lang></b><br>
+                    <br>
+                    <acx:lang>Sono disponibili 3 piani di rinnovo della quota associativa:</acx:lang> <br>
+                    <br>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-8 my-12 ">
+                    <p> <acx:lang>Rinnovo per</acx:lang><strong> <acx:lang>1 anno</acx:lang></strong> <acx:lang>e la possibilità di scaricare</acx:lang> <strong><acx:lang>25 foto</acx:lang></strong> <acx:lang>a</acx:lang> <strong>€ 5,00</strong></p>
+                  </div>
+                  <div class="col-lg-4 my-12 text-center "> <a href="javascript:startPayPal20f()"><img src="_img/btn_xpressCheckout_it.gif" width="145" height="42" alt="" /></a></div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-8 my-12 ">
+                    <p> <acx:lang>Rinnovo per</acx:lang><strong> <acx:lang>1 anno</acx:lang></strong> <acx:lang>e la possibilità di scaricare</acx:lang> <strong><acx:lang>1.000 foto</acx:lang></strong> <acx:lang>a</acx:lang> <strong>€ 20,00</strong></p>
+                  </div>
+                  <div class="col-lg-4 my-12 text-center "> <a href="javascript:startPayPal1()"><img src="_img/btn_xpressCheckout_it.gif" width="145" height="42" alt="" /></a></div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-8 my-12 ">
+                    <p><acx:lang>Rinnovo per</acx:lang> <strong><acx:lang>3 anni</acx:lang> </strong><acx:lang>e la possibilità di scaricare</acx:lang><strong> <acx:lang>3.000 foto</acx:lang></strong> <acx:lang>a</acx:lang> <strong>€ 40,00</strong><br />
+                    </p>
+                  </div>
+                  <div class="col-lg-4 my-12 text-center "><a href="javascript:startPayPal3()"><img src="_img/btn_xpressCheckout_it.gif" width="145" height="42" alt="" /></a></div>
+                  <div class="col-lg-12  my-12"><acx:lang>Dopo aver effettuato il pagamento, potrai scaricare nuovamente le foto.</acx:lang><br>
+                    <br>
+                  </div>
+                </div>
+                <form style="width:100%" action="PayPalDoPayment.abl" method="post" id="paypal" name="paypal">
+                  <input name="cmd" id="cmd" type="hidden" value="start" />
+                  <input type="hidden" name="act" />
+                  <input name="id_ordine" type="hidden" id="id_ordine" value="<%=user.getId_users()%>" />
+                  <!-- PAYPAL -->
+                  <input name="amt" type="hidden" id="amt" value="20,00" />
+                  <input name="SHIPTONAME" type="hidden" id="SHIPTONAME" value="<%= user.getCognomeNome() %>" />
+                  <input name="SHIPTOCITY" type="hidden" id="SHIPTOCITY" value="<%= user.getCitta() %>" />
+                  <input name="SHIPTOCOUNTRYCODE" type="hidden" id="SHIPTOCOUNTRYCODE" value="<%= user.getClifor().getNazione().getCodice().isEmpty()?"IT": user.getClifor().getNazione().getCodice()%>" />
+                  <input name="SHIPTOSTREET" type="hidden" id="SHIPTOSTREET" value="<%= user.getIndirizzo() %>" />
+                  <input name="SHIPTOZIP" type="hidden" id="SHIPTOZIP" value="<%= user.getCap() %>" />
+                  <input name="SHIPTOSTATE" type="hidden" id="SHIPTOSTATE" value="<%= user.getProvincia() %>" />
+                  <input name="DESC" type="hidden" id="DESC" value="Ordine: <%=user.getId_users()%> del <%=df.format(user.getToday())%> - Euro: <%=nf.format(20.0) %>" />
+                </form>
+              </acx:if>
+              <acx:else>
+                <div class="row">
+                  <div class="col-lg-12 my-12 "><b><acx:lang>Rinnova tramite PayPal</acx:lang></b><br>
+                    <br>
+                  </div>
+                  <div class="col-lg-8 my-12 ">
+                    <p><em><strong><acx:lang>Attenzione... Per poter rinnovare tramite PayPal, devi completare i tuoi dati di registrazione con tutti i campi obbligatori</acx:lang></strong></em></p>
+                    <a href="registrazione_utente.html" class="btn btn-primary btn-block"><acx:lang>MODIFICA I TUOI DATI</acx:lang></a> </div>
+                </div>
+              </acx:else>
+            </div>
+          </div>
+          <!-- paypal --> 
+          
+        </acx:if>
+      </div>
+      <div class="col-md-12 text-danger font-weight-bold"> <%= msg %> </div>
+    </div>
+    <acx:if wherecondition="<%=listRD.getTotNumberOfRecords()>0%>">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="box"> 
+            <!-- .box-header --> 
+            
+            <!-- /.box-header -->
+            <div class="box-body " id="no-more-tables">
+              <table class="table table-bordered table-hover table-striped dataTable table-condensed">
+                <thead>
+                  <tr>
+                    <th><acx:lang>Num. Doc</acx:lang></th>
+                    <th><acx:lang>Data</acx:lang></th>
+                    <th><acx:lang>Descrizione</acx:lang></th>
+                  </tr>
+                </thead>
+                <acx:whilevec  rowbeanclass="it.acxent.contab.RigaDocumento" vectumerator="listRD">
+                  <tr>
+                    <td data-title="Numero"><%= rowBean.getDocumento().getNumeroDocumentoCompleto() %></td>
+                    <td data-title="Data"><%= df.format(rowBean.getDocumento().getDataDocumento()) %></td>
+                    <td data-title="Tipo"><%= rowBean.getDescrizioneRiga() %></td>
+                  </tr>
+                </acx:whilevec>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </acx:if>
+  </div>
+</acx:if_logon_ok>
+<acx:else_logon>
+  <jsp:include page="_inc_header.jsp"  flush="true" >
+  <jsp:param name="menuAttivo" value="login"/>
+  </jsp:include>
+  <div class="container my-3">
+    <div class="row">
+      <div class="col-lg-12 my-4">
+        <h1 class="my-3 text-capitalize"><acx:lang>Login</acx:lang></h1>
+        <p class="mt-5 mb-4"><acx:lang>Se sei gia' un Socio Ets Regalami un Sorriso, inserisci il tuo Username e Password, altrimenti vai alla pagina di</acx:lang> <a href="registrazione_utente.html"><acx:lang>registrazione</acx:lang></a>.</p>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col-sm-6">
+            <div class="col-md-12 text-warning"> <%= msg %> </div>
+            <form class="container" name="frmLogin" id="frmLogin" method="post" action="Logon.abl">
+              <input type="hidden" name="cmd" id="cmd" />
+              <input type="hidden" name="act" id="act" />
+              <input type="hidden" name="cmdIU" id="cmdIU" />
+              <input name="thePage" type="hidden" id="thePage" value="">
+              <div class="form-group">
+                <label for="uname1"><acx:lang>Username</acx:lang></label>
+                <acx:lang>/ Email</acx:lang>
+                <input type="text" class="form-control form-control-lg rounded-0" name="login" id="login" required="">
+              </div>
+              <div class="form-group">
+                <label><acx:lang>Password</acx:lang></label>
+                <input type="password" class="form-control form-control-lg rounded-0" id="pwd" name="pwd" required="" autocomplete="new-password">
+              </div>
+              <div> </div>
+              <a href="javascript:loginDCR()" class="btn btn-primary btn-block"><acx:lang>Accedi</acx:lang></a>
+              <p class="mt-3"><acx:lang>Hai dimenticato la password?</acx:lang></p>
+              <div class="form-group ">
+                <input id="lostPwdEmail" name="lostPwdEmail" type="text" placeholder="<acx:lang>email</acx:lang>" class="form-control input-md" required="">
+              </div>
+              <div> </div>
+              <a href="javascript:lostPwdLogon()" class="btn btn-primary btn-block"><acx:lang>Recupera i dati</acx:lang></a>
+              <div class="col"></div>
+              <div class="form-group">
+                <label for="uname1"><acx:lang>Accesso Tramite Google</acx:lang></label>
+                <div id="g_id_onload" data-client_id="<%=attivita.getPGoogleSigninClientId()%>" data-login_uri="<%=attivita.getWwwAddressParm()%>googleSignin.html" data-cal="login_clienti.html"> </div>
+                <div class="g_id_signin" data-type="standard"></div>
+              </div>
+              <jsp:include page="_inc_login_facebookSignin.jsp" flush="true" >
+              <jsp:param name="_callingJsp" value="documentoCR.jsp" />
+              <jsp:param name="_thePage" value="documentoCR.jsp" />
+              </jsp:include>
+            </form>
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</acx:else_logon>
+<!-- /.container --> <!-- InstanceEndEditable -->
+
+<!-- Footer -->
+ <jsp:include page="_inc_footer.jsp" flush="true" />
+
+<script>
+	$('#datepicker-sport').datepicker({
+    language: "it"
+});
+	$('#datepicker-eventi').datepicker({
+    language: "it"
+});
+		
+	</script>
+	<!-- InstanceBeginEditable name="lastStuff" --> <!-- InstanceEndEditable -->
+<div class="modal-loading"></div>
+</body>
+<!-- InstanceEnd --></html>

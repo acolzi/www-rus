@@ -1,0 +1,11 @@
+### user
+logout,Cart.abl,logout,
+utente,Users.abl,ni,,
+login,Logon.abl,login,
+register,Users.abl,md,iscrizione,@id_users
+clienti,Ordine.abl,
+order,ShowOrdine.abl,,,@idcrypt
+##news
+newsD,News.abl,md,,@id_news
+newsList,News.abl.search,,
+news,News.abl,last,,
