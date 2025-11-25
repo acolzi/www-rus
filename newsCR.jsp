@@ -88,7 +88,7 @@
           <div class="col-lg-6 col-xs-6">
             <label>
               <acx:lang>Totale Record
-              :</acx:lang> ${list.getTotNumberOfRecords()}</label>
+              </acx:lang>: ${list.getTotNumberOfRecords()}</label>
           </div>
           <div class="col-lg-6 col-xs-6 right-text">
             <acx:prevvec link='<%="rivista+atleticaImmagine-"+(list.getPageNumber()-1)+".html"%>' vectumerator="list"> <i class="fa fa-angle-double-left fa-lg fa-border"></i></acx:prevvec>

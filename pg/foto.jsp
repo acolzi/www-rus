@@ -7,7 +7,7 @@
 <jsp:useBean id="bean" class="it.acxent.pg.Foto" type="it.acxent.pg.Foto" scope="request" > 
 </jsp:useBean>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
+<title>..</title>
 </head>
 
 <body style="overflow:hidden; margin:0px; border:0px; padding:0px; text-align:center; "><acx:if wherecondition="<%=bean.getImpression()>0%>">

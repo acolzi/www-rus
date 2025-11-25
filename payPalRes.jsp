@@ -78,15 +78,15 @@
     <div class="col-lg-6 my-4">
       <h1 class="my-3"><acx:lang>Pagamento tramite PayPal</acx:lang></h1>
       <p class="mt-5 mb-4"><acx:lang>Ciao</acx:lang> <strong><%=utenteLogon.getCognomeNome()%></strong><br>
-        <acx:lang>Indirizzo:</acx:lang> <strong><%=user.getIndirizzo()%> <acx:lang>n.</acx:lang> <%=user.getNumeroCivico()%>, <%=user.getCitta()%> <%=user.getCap()%> (<%=user.getProvincia()%>)</strong><br>
-        <acx:lang>Società di appartenenza:</acx:lang> <strong><%=user.getContatto()%> </strong><br>
-        <acx:lang>Telefono:</acx:lang> <strong><%=user.getTelefono()%></strong><br>
-        <acx:lang>Email:</acx:lang> <strong><%=user.getEMail()%></strong><br>
-        <acx:lang>Codice Fiscale:</acx:lang> <strong><%=user.getCodFisc()%></strong><br>
-        <acx:lang>Società di appartenenza:</acx:lang> <strong><%=user.getContatto()%></strong><br>
-        <acx:lang>Data Scadenza:</acx:lang> <strong><%=df.format(user.getDataScadenza())%></strong><br>
-        <acx:lang>Num. foto visualizzate/N. foto Max:</acx:lang> <strong><%=user.getNFotoVisual()%>/<%=user.getNFotoMax()%></strong><br>
-        <acx:lang>Num. foto visualizzate oggi:</acx:lang> <strong><%=user.getNFotoVisualOggi()%></strong></p>
+        <acx:lang>Indirizzo</acx:lang>: <strong><%=user.getIndirizzo()%> <acx:lang>n.</acx:lang> <%=user.getNumeroCivico()%>, <%=user.getCitta()%> <%=user.getCap()%> (<%=user.getProvincia()%>)</strong><br>
+        <acx:lang>Società di appartenenza</acx:lang>: <strong><%=user.getContatto()%> </strong><br>
+        <acx:lang>Telefono</acx:lang>: <strong><%=user.getTelefono()%></strong><br>
+        <acx:lang>Email</acx:lang>: <strong><%=user.getEMail()%></strong><br>
+        <acx:lang>Codice Fiscale</acx:lang>: <strong><%=user.getCodFisc()%></strong><br>
+        <acx:lang>Società di appartenenza</acx:lang>: <strong><%=user.getContatto()%></strong><br>
+        <acx:lang>Data Scadenza</acx:lang>: <strong><%=df.format(user.getDataScadenza())%></strong><br>
+        <acx:lang>Num. foto visualizzate/N. foto Max</acx:lang>: <strong><%=user.getNFotoVisual()%>/<%=user.getNFotoMax()%></strong><br>
+        <acx:lang>Num. foto visualizzate oggi</acx:lang>: <strong><%=user.getNFotoVisualOggi()%></strong></p>
       <acx:if wherecondition="<%=user.getDataScadenza()!=null%>">
         <p class="mt-5 mb-4"><acx:lang>Mancano</acx:lang> <strong><%=user.getGgAScadenza()%> </strong> <acx:lang>giorni alla scadenza.</acx:lang></p>
       </acx:if>
@@ -101,11 +101,11 @@
           </strong></p>
         <p>
           <acx:lang>Risultato Transazione
-          :</acx:lang><strong><%=payPalResp.getL_SHORTMESSAGE0()%></strong><br />
+          </acx:lang>:<strong><%=payPalResp.getL_SHORTMESSAGE0()%></strong><br />
           <acx:lang>Error Code
-          :</acx:lang> <strong><%=payPalResp.getL_ERRORCODE0()%></strong> <br />
+          </acx:lang>: <strong><%=payPalResp.getL_ERRORCODE0()%></strong> <br />
           <acx:lang>Error Desc
-          :</acx:lang> <strong>
+          </acx:lang>: <strong>
           <%=payPalResp.getL_LONGMESSAGE0()%>
           </strong><br />
           <acx:lang>Riprova</acx:lang> <a href="dettaglio_clienti.html"><acx:lang>tornando alla pagina di pagamento</acx:lang></a> <acx:lang>oppure contatta</acx:lang>
@@ -130,18 +130,18 @@
           </div>
           <div class="col-lg-12 my-4"><strong>
             <acx:lang>Payer ID 
-            :</acx:lang></strong> <%=payPalResp.getPAYERID()%><br>
+            </acx:lang>:</strong> <%=payPalResp.getPAYERID()%><br>
             <strong>
             <acx:lang>Nome
-            :</acx:lang> </strong><%= payPalResp.getFIRSTNAME() %> <strong>
+            </acx:lang>: </strong><%= payPalResp.getFIRSTNAME() %> <strong>
             <acx:lang>Cognome
-            :</acx:lang></strong> <%= payPalResp.getLASTNAME() %> <strong>
+            </acx:lang>:</strong> <%= payPalResp.getLASTNAME() %> <strong>
             <acx:lang>E-mail
-            :</acx:lang></strong> <%= payPalResp.getEMAIL() %>
+            </acx:lang>:</strong> <%= payPalResp.getEMAIL() %>
             </p>
             <br>
             <p><strong>
-              <acx:lang>Indirizzo di Spedizione:</acx:lang> 
+              <acx:lang>Indirizzo di Spedizione</acx:lang>: 
               </strong><%= payPalResp.getSHIPTOSTREET() %> - <%= payPalResp.getSHIPTOZIP() %> <%= payPalResp.getSHIPTOCITY() %> -<%= payPalResp.getSHIPTOSTATE() %></p>
             <br>
             <p class="bg-warning">
@@ -182,17 +182,17 @@
         </acx:if>
         <acx:ifparm codice="TEST" value="1">
           <tr>
-            <td colspan="2"><p><acx:lang>Importo:</acx:lang><%=payPalResp.getAMT()%><br />
-                <acx:lang>Payer. ID:</acx:lang> <%=payPalResp.getPAYERID()%><br />
-                <acx:lang>Buyer Name:</acx:lang><%=payPalResp.getFIRSTNAME()+" "+payPalResp.getLASTNAME()%><br />
-                <acx:lang>Buyer Email:</acx:lang><%=payPalResp.getEMAIL()%><br />
-                <acx:lang>Token.:</acx:lang><%=payPalResp.getTOKEN()%><br />
+            <td colspan="2"><p><acx:lang>Importo</acx:lang>:<%=payPalResp.getAMT()%><br />
+                <acx:lang>Payer. ID</acx:lang>: <%=payPalResp.getPAYERID()%><br />
+                <acx:lang>Buyer Name</acx:lang>:<%=payPalResp.getFIRSTNAME()+" "+payPalResp.getLASTNAME()%><br />
+                <acx:lang>Buyer Email</acx:lang>:<%=payPalResp.getEMAIL()%><br />
+                <acx:lang>Token.</acx:lang>:<%=payPalResp.getTOKEN()%><br />
                 <acx:lang>Risultato Transazione
-                :</acx:lang><strong><%=payPalResp.getACK()%> <%=payPalResp.getL_SHORTMESSAGE0()%></strong><br />
+                </acx:lang>:<strong><%=payPalResp.getACK()%> <%=payPalResp.getL_SHORTMESSAGE0()%></strong><br />
                 <acx:lang>Error Code
-                :</acx:lang> <strong><%=payPalResp.getL_ERRORCODE0()%></strong> <br />
+                </acx:lang>: <strong><%=payPalResp.getL_ERRORCODE0()%></strong> <br />
                 <acx:lang>Error Desc
-                :</acx:lang> <strong>
+                </acx:lang>: <strong>
                 <%=payPalResp.getL_LONGMESSAGE0()%>
                 </strong></p></td>
           </tr>

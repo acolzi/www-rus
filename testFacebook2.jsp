@@ -131,7 +131,7 @@
 <div id="status"> </div>
 	<form name="f" id="f">
 <p>
-  <label for="accessToken"><acx:lang>Text Field:</acx:lang></label>
+  <label for="accessToken"><acx:lang>Text Field</acx:lang>:</label>
   <input type="text" name="facebookSignedRequest" id="facebookSignedRequest">
 </p></form>
 </body>

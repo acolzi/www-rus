@@ -82,14 +82,14 @@
 		           <br>
 			       </a> </div>
         <p class="mt-5 mb-4"><acx:lang>Ciao</acx:lang> <strong><%=utenteLogon.getCognomeNome()%></strong><br>
-          <acx:lang>Indirizzo:</acx:lang> <strong><%=user.getIndirizzo()%> <acx:lang>n.</acx:lang> <%=user.getNumeroCivico()%>, <%=user.getCitta()%> <%=user.getCap()%> (<%=user.getProvincia()%>)</strong><br>
-          <acx:lang>Società di appartenenza:</acx:lang> <strong><%=user.getContatto()%> </strong><br>
-          <acx:lang>Telefono:</acx:lang> <strong><%=user.getTelefono()%></strong><br>
-          <acx:lang>Email:</acx:lang> <strong><%=user.getEMail()%></strong><br>
-          <acx:lang>Codice Fiscale:</acx:lang> <strong><%=user.getCodFisc()%></strong><br>
-          <acx:lang>Data Scadenza:</acx:lang> <strong><%=df.format(user.getDataScadenza())%></strong><br>
-          <acx:lang>Num. foto visualizzate/N. foto Max:</acx:lang> <strong><%=user.getNFotoVisual()%>/<%=user.getNFotoMax()%></strong><br>
-          <acx:lang>Num. foto visualizzate oggi:</acx:lang> <strong><%=user.getNFotoVisualOggi()%></strong></p>
+          <acx:lang>Indirizzo</acx:lang>: <strong><%=user.getIndirizzo()%> <acx:lang>n.</acx:lang> <%=user.getNumeroCivico()%>, <%=user.getCitta()%> <%=user.getCap()%> (<%=user.getProvincia()%>)</strong><br>
+          <acx:lang>Società di appartenenza</acx:lang>: <strong><%=user.getContatto()%> </strong><br>
+          <acx:lang>Telefono</acx:lang>: <strong><%=user.getTelefono()%></strong><br>
+          <acx:lang>Email</acx:lang>: <strong><%=user.getEMail()%></strong><br>
+          <acx:lang>Codice Fiscale</acx:lang>: <strong><%=user.getCodFisc()%></strong><br>
+          <acx:lang>Data Scadenza</acx:lang>: <strong><%=df.format(user.getDataScadenza())%></strong><br>
+          <acx:lang>Num. foto visualizzate/N. foto Max</acx:lang>: <strong><%=user.getNFotoVisual()%>/<%=user.getNFotoMax()%></strong><br>
+          <acx:lang>Num. foto visualizzate oggi</acx:lang>: <strong><%=user.getNFotoVisualOggi()%></strong></p>
         <p class=""><acx:lang>Verificate che i dati siano corretti. Per variazioni scrivere a</acx:lang> <a href="mailto:foto@pierogiacomelli.com"><acx:lang>foto@pierogiacomelli.com</acx:lang></a> <acx:lang>oppure vai su</acx:lang> <a href="registrazione_utente.html"><acx:lang>Modifica Dati</acx:lang></a> <br>
           <acx:lang>Attenzione, vale il silenzio assenso sulla correttezza dei dati anagrafica soci.</acx:lang></p>
         <acx:if wherecondition="<%=user.getDataScadenza()!=null%>">
@@ -134,7 +134,7 @@
                 <div class="row">
                   <div class="col-lg-12 my-12 "><b><acx:lang>Rinnova tramite PayPal</acx:lang></b><br>
                     <br>
-                    <acx:lang>Sono disponibili 3 piani di rinnovo della quota associativa:</acx:lang> <br>
+                    <acx:lang>Sono disponibili 3 piani di rinnovo della quota associativa</acx:lang>: <br>
                     <br>
                   </div>
                 </div>

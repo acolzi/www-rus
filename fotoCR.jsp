@@ -199,10 +199,10 @@
         <div id="demo">
           <acx:whilevec rowbeanclass="it.acxent.pg.Foto" vectumerator="list">
             <acx:if_logon_ok> <a href="javascript:mostraFoto(<%=rowBean.getId_foto()%>)"> <img src="foto/<%=rowBean.getFileName(".jpg")%>+tn-<%=rowBean.getId_foto()%>.jpg" alt="" class="thumb" />
-              <div class="caption"><acx:lang>Hits:</acx:lang> <%=rowBean.getImpression()%> - <%=df.format(rowBean.getDataUltimaVisual())%> </div>
+              <div class="caption"><acx:lang>Hits</acx:lang>: <%=rowBean.getImpression()%> - <%=df.format(rowBean.getDataUltimaVisual())%> </div>
               </a> </acx:if_logon_ok>
             <acx:else_logon> <a data-toggle="modal" data-target="#ModalNoLog"> <img src="foto/<%=rowBean.getFile()%>?id_foto=<%=rowBean.getId_foto()%>" alt="" class="thumb" />
-              <div class="caption"><acx:lang>Hits:</acx:lang> <%=rowBean.getImpression()%> - <%=df.format(rowBean.getDataUltimaVisual())%> </div>
+              <div class="caption"><acx:lang>Hits</acx:lang>: <%=rowBean.getImpression()%> - <%=df.format(rowBean.getDataUltimaVisual())%> </div>
               </a> </acx:else_logon>
           </acx:whilevec>
         </div>
