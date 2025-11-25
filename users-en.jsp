@@ -14,7 +14,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <!-- [favicon] begin -->
-<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
 <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 <!-- [favicon] end -->
 <!-- JSP -->
@@ -52,17 +52,12 @@
 <link href="css/custom-style.css" rel="stylesheet">
 <!-- Css Datepicker -->
 <link href="addons/datepicker/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet">
-<link rel="stylesheet" href="admin/_V4/_css/ajaxLoading.css">
+<link  rel="stylesheet"  href='admin/_V4/_css/ajaxLoading.css'>
 <!-- InstanceBeginEditable name="head" -->
 <jsp:useBean id="bean" class="it.acxent.pg.Users" type="it.acxent.pg.Users" scope="request" >
 </jsp:useBean>
 <!-- InstanceEndEditable -->
-	<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
-<script type="text/javascript">
-    window.cookieconsent_options = {"message":"Questo sito o gli strumenti terzi da questo utilizzati si avvalgono di cookie necessari al funzionamento ed utili alle finalità illustrate nella cookie policy. Se vuoi saperne di più o negare il consenso a tutti o ad alcuni cookie, consulta la cookie policy. Chiudendo questo banner, scorrendo questa pagina, cliccando su un link o proseguendo la navigazione in altra maniera, acconsenti all'uso dei cookie.","dismiss":"Accetto","learnMore":"Cookie Policy","link":"https://www.regalamiunsorriso.it/privacy.html","theme":"dark-bottom"};
-</script>
-<script type="text/javascript" src="js/cookieconsent.min.js"></script>
-<!-- End Cookie Consent plugin -->
+<jsp:include page="_inc_cookie.jsp" flush="true" />
 <jsp:include page="_inc_head.jsp" flush="true" />
 </head>
 <body>
@@ -91,7 +86,7 @@
         <form class="container" id="dettaglio" novalidate action="Users.abl" method="post" name="dettaglio" onsubmit="return controlloRegistrazione();">
           <h1 class="my-3 text-capitalize">Registration / Data Modification</h1>
           <div class="alert-warning" style="font-size: 24px; font-weight: BOLD;"> <%=msg%></div>
-          <p class="mt-5 mb-4">If you are already a Supporter of ETS Regalami un Sorriso, go to the <a href="login_clienti.html">login</a> page, otherwise, please read carefully what follows and register.</p>
+          <p class="mt-5 mb-4">If you are already a Supporter of ETS Regalami un Sorriso, go to the <a href="login_clienti-<%=lang%>.html">login</a> page, otherwise, please read carefully what follows and register.</p>
           <div class="alert alert-secondary" role="alert">
             <p>The granting of a password for access to this website is subject to the understanding and acceptance of the following:</p>
             <ul>
@@ -141,7 +136,7 @@
                 <li>If your data is not correct, write to <a href="mailto:foto.atletica.immagine@gmail.com">foto.atletica.immagine@gmail.com</a></li>
                 <li>Once our email is received, you must confirm your registration by clicking, only once, on the appropriate link</li>
                 <li>The email must be written entirely in lowercase</li>
-                <li>Please see our privacy specifics at <a href="privacy.html">privacy</a></li>
+                <li>Please see our privacy specifics at <a href="privacy-<%=lang%>.html">privacy</a></li>
               </ul></p>
           </div>
           

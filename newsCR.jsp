@@ -14,7 +14,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <!-- [favicon] begin -->
-<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
 <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 <!-- [favicon] end --> 
 <!-- JSP -->
@@ -56,9 +56,10 @@
 <link href="css/custom-style.css" rel="stylesheet">
 <!-- Css Datepicker -->
 <link href="addons/datepicker/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet">
-<link rel="stylesheet" href="admin/_V4/_css/ajaxLoading.css">
+<link  rel="stylesheet"  href='admin/_V4/_css/ajaxLoading.css'>
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
+<jsp:include page="_inc_cookie.jsp" flush="true" />
 <jsp:include page="_inc_head.jsp" flush="true" />
 </head>
 

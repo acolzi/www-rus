@@ -15,7 +15,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <!-- [favicon] begin -->
-<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
 <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 <!-- [favicon] end -->
 <!-- JSP -->
@@ -65,7 +65,7 @@
 <link href="css/custom-style.css" rel="stylesheet">
 <!-- Css Datepicker -->
 <link href="addons/datepicker/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet">
-<link rel="stylesheet" href="admin/_V4/_css/ajaxLoading.css">
+<link  rel="stylesheet"  href='admin/_V4/_css/ajaxLoading.css'>
 <!-- InstanceBeginEditable name="head" -->
 <!-- Css Gallery -->
 <acx:if wherecondition="<%=CR.getFlgVisCompatta()==1%>">
@@ -75,12 +75,7 @@
   <link href="addons/justified-gallery/css/justifiedGalleryBig.css" rel="stylesheet">
 </acx:else>
 <!-- InstanceEndEditable -->
-	<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
-<script type="text/javascript">
-    window.cookieconsent_options = {"message":"Questo sito o gli strumenti terzi da questo utilizzati si avvalgono di cookie necessari al funzionamento ed utili alle finalità illustrate nella cookie policy. Se vuoi saperne di più o negare il consenso a tutti o ad alcuni cookie, consulta la cookie policy. Chiudendo questo banner, scorrendo questa pagina, cliccando su un link o proseguendo la navigazione in altra maniera, acconsenti all'uso dei cookie.","dismiss":"Accetto","learnMore":"Cookie Policy","link":"https://www.regalamiunsorriso.it/privacy.html","theme":"dark-bottom"};
-</script>
-<script type="text/javascript" src="js/cookieconsent.min.js"></script>
-<!-- End Cookie Consent plugin -->
+<jsp:include page="_inc_cookie.jsp" flush="true" />
 <jsp:include page="_inc_head.jsp" flush="true" />
 </head>
 <body>

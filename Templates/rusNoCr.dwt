@@ -55,6 +55,7 @@
 <link  rel="stylesheet"  href='../admin/_V4/_css/ajaxLoading.css'>
 <!-- TemplateBeginEditable name="head" -->
 <!-- TemplateEndEditable -->
+<jsp:include page="_inc_cookie.jsp" flush="true" />
 <jsp:include page="_inc_head.jsp" flush="true" />
 </head>
 
