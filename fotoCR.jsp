@@ -94,7 +94,7 @@
   <!-- Marketing Icons Section -->
   <div class="row mb-5">
     <div class="col-lg-12">
-      <h1 class="my-4"><span class="text-secondary"><%=CR.getGara().getTipoGara().getTipoGaraPadre().getDescrizione()%> // <a href="<%=CR.getGara().getTipoGara().getDescrizione()%>-elenco_eventi-<%=CR.getGara().getId_tipoGara()%>---1.html"><%=CR.getGara().getTipoGara().getDescrizione()%></a> // </span><%=CR.getGara().getDescrizione()%></h1>
+      <h1 class="my-4"><span class="text-secondary"><%=CR.getGara().getTipoGara().getTipoGaraPadre().getDescrizione(lang)%> // <a href="<%=CR.getGara().getTipoGara().getDescrizione(lang)%>-elenco_eventi-<%=CR.getGara().getId_tipoGara()%>---1-<%=lang%>.html"><%=CR.getGara().getTipoGara().getDescrizione(lang)%></a> // </span><%=CR.getGara().getDescrizione()%></h1>
     </div>
     <div class="col-md-2">
       <acx:if_img checkScaled="false"  scaledPrefix="260/" scaledWidth="260"><img src="_img/_gara/<%=bean.getImgFileName(1) %>" class="img-fluid border border-warning"></acx:if_img>
@@ -221,9 +221,9 @@
         <div> <acx:lang>Per poter vedere e scaricare le foto devi effettuare il login ed essere in regola con il rinnovo della quota associativa.</acx:lang><br>
           <br>
           <acx:if_logon_ok> <br>
-            <acx:lang>Vai al</acx:lang><a href="dettaglio_clienti.html"> <acx:lang>Dettaglio Account</acx:lang> </a><acx:lang>per metterti in regola con il pagamento</acx:lang> </acx:if_logon_ok>
+            <acx:lang>Vai al</acx:lang><a href="dettaglio_clienti-<%=lang%>.html"> <acx:lang>Dettaglio Account</acx:lang> </a><acx:lang>per metterti in regola con il pagamento</acx:lang> </acx:if_logon_ok>
           <acx:else_logon><br>
-            <acx:lang>Vai alla</acx:lang><a href="login_clienti.html"> <acx:lang>pagina di login</acx:lang></a> <acx:lang>oppure se non sei registrato, vai alla</acx:lang> <a href="registrazione_utente.html"><acx:lang>pagina di registrazione</acx:lang></a> </acx:else_logon>
+            <acx:lang>Vai alla</acx:lang><a href="login_clienti-<%=lang%>.html"> <acx:lang>pagina di login</acx:lang></a> <acx:lang>oppure se non sei registrato, vai alla</acx:lang> <a href="registrazione_utente-<%=lang%>.html"><acx:lang>pagina di registrazione</acx:lang></a> </acx:else_logon>
         </div>
       </div>
     </acx:else>

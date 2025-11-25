@@ -2,6 +2,8 @@
 <%@ taglib uri="/WEB-INF/acxent.tld" prefix="acx" %>
 <%@ taglib uri="/WEB-INF/art.tld" prefix="art" %>
 <%@ taglib uri="/WEB-INF/pg.tld" prefix="pg" %>
+	<%@ page language="java" import="it.acxent.jsp.Ab" %>
+<%@ taglib uri="/WEB-INF/cc.tld" prefix="cc" %>
 <%="<script>var webApp='"+(request.getContextPath().equals("/")?"":request.getContextPath())+"';</script>"%>
 <jsp:useBean id="utenteLogon" class="it.acxent.anag.Users" type="it.acxent.anag.Users" scope="session" >
 </jsp:useBean>
@@ -55,10 +57,10 @@
             <div class="row"> 
               <pg:whiletipogara id_tipoPadre="0" rowbeanname="rowBean">
                <div class="col-sm-6 <%=rowBean.getId_tipoGara()==2?"vertical-divider":""%>">
-                  <h2><%=rowBean.getDescrizione()%></h2>
+                  <h2><%=rowBean.getDescrizione(lang)%></h2>
                   <ul class="multi-column-dropdown">
                     <pg:whiletipogara id_tipoPadre="<%=rowBean.getId_tipoGara()%>" id_tipoPadreSelected="<%=rowBean.getId_tipoGara()%>"  rowbeanname="rowBean1">
-                      <li><a href="<%=rowBean1.getDescrizione()%>-elenco_eventi-<%=rowBean1.getId_tipoGara()%>---1.html"><%=rowBean1.getDescrizione()%></a></li>
+                      <li><a href="<%=rowBean1.getDescrizione()%>-elenco_eventi-<%=rowBean1.getId_tipoGara()%>---1.html"><%=rowBean1.getDescrizione(lang)%></a></li>
                     </pg:whiletipogara>
                   </ul>
                 </div>
@@ -101,7 +103,18 @@
           <li class="nav-item"> <a class="nav-link <%= menuAttivo.equals("diventa") ? "active" : "" %>" href="registrazione_utente.html"><i class="fa fa-user-plus" aria-hidden="true"></i> <acx:lang>Diventa socio!</acx:lang></a> </li>
           <li class="nav-item"> <a class="nav-link" href="https://it-it.facebook.com/pg/Regalami-un-sorriso-ETS-189377806523/community/"><img src="images/FB-f-Logo__blue_29.png" class="img-fluid" alt="<acx:lang>Facebook</acx:lang>"></a></li>
         </ul>
-      </acx:else_logon>
+      </acx:else_logon>		<ul class="navbar-nav ml-auto" data="langMenu">
+          <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" href="#" id="langDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img src="images/flags/<%=lang%>.png" alt="<%=Ab.getLangDesc(lang)%>" title="<%=Ab.getLangDesc(lang)%>" class="flag"> </a>
+              <div class="dropdown-menu" aria-labelledby="langDropdownMenuLink">
+              <acx:whilevec rowbeanclass="it.acxent.common.Lang" vectumerator="_listaLangAtt">
+                <acx:changelang targetlang="<%=rowBean.getLang()%>" hide="true">
+                 <a class="dropdown-item" href="#"> <img src="images/flags/<%=rowBean.getLang()%>.png" class="flag" alt="<%=Ab.getLangDesc(rowBean.getLang())%>" title="<%=Ab.getLangDesc(rowBean.getLang())%>"> <%=Ab.getLangDesc(rowBean.getLang())%> </a>
+                </acx:changelang>
+              </acx:whilevec>
+            </div>
+      </ul>
+			  
     </div>
   </div>
 </nav>

@@ -1,4 +1,5 @@
 <!-- _inc_human_check_challenge.jsp -->
+<jsp:useBean id="lang" class="java.lang.String" type="java.lang.String" scope="session" ></jsp:useBean>
 <%@page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="/WEB-INF/acxent.tld" prefix="acx" %>
 <%@ taglib uri="/WEB-INF/art.tld" prefix="art" %>
@@ -35,7 +36,7 @@
     </div>
     <div class="col-sm-6">
       <div class="form-group">
-        <label for="uname1"><%=_challenge.getQuestion()%></label>
+        <label for="uname1"><%=_challenge.getQuestion(lang)%></label>
         <input name="h_answer" type="text" class="form-control form-control-lg rounded-0" id="h_answer">
       </div>
       <a href="javascript:checkChallenge()" class="btn btn-primary btn-block">

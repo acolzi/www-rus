@@ -94,7 +94,7 @@
   <!-- Marketing Icons Section -->
   <div class="row mb-5">
     <div class="col-lg-12">
-      <h1 class="my-4"><span class="text-secondary"><%=CR.getGara().getTipoGara().getTipoGaraPadre().getDescrizione()%> // <a href="<%=CR.getGara().getTipoGara().getDescrizione()%>-elenco_eventi-<%=CR.getGara().getId_tipoGara()%>---1.html"><%=CR.getGara().getTipoGara().getDescrizione()%></a> // </span><%=CR.getGara().getDescrizione()%></h1>
+      <h1 class="my-4"><span class="text-secondary">xx<%=CR.getGara().getTipoGara().getTipoGaraPadre().getDescrizione(lang)%> // <a href="<%=CR.getGara().getTipoGara().getDescrizione(lang)%>-elenco_eventi-<%=CR.getGara().getId_tipoGara()%>---1-<%=lang%>.html"><%=CR.getGara().getTipoGara().getDescrizione()%></a> // </span><%=CR.getGara().getDescrizione()%></h1>
     </div>
     <div class="col-md-2">
       <acx:if_img checkScaled="false"  scaledPrefix="260/" scaledWidth="260"><img src="_img/_gara/<%=bean.getImgFileName(1) %>" class="img-fluid border border-warning"></acx:if_img>

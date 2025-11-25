@@ -40,7 +40,7 @@
 <%@ taglib uri="/WEB-INF/news.tld" prefix="news" %>
 <!-- InstanceEndEditable -->
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Regalami Un Sorriso ETS - Correndo, sognando e... lottando</acx:lang></title>
+<title>Regalami Un Sorriso ETS - Correndo, sognando e... lottando</title>
 <!-- InstanceEndEditable -->
 
 <!-- Bootstrap core CSS -->
@@ -73,31 +73,31 @@
 <div class="container my-3">
   <div class="row">
     <div class="col-lg-12 my-4">
-      <h1 class="my-3">Associazione</acx:lang></h1>
+      <h1 class="my-3">Associazione</h1>
       <div class="row">
         <div class="col-lg-6 col-xs-12">
           <div class="pt-3 px-3 pb-0 bg-light border">
-          <p><strong>ETS REGALAMI UN SORRISO</acx:lang></strong><br>
-            Via Torquato Tasso 23/C</acx:lang><br>
-            59100 PRATO PO</acx:lang><br>
-            Codice fiscale 92076170486</acx:lang></p>
+          <p><strong>ETS REGALAMI UN SORRISO</strong><br>
+            Via Torquato Tasso 23/C<br>
+            59100 PRATO PO<br>
+            Codice fiscale 92076170486</p>
             </div>
             <div class="p-3">
-          <p><strong>REGALAMI UN SORRISO ETS</acx:lang> <br>
-            Banca IFIGEST Prato</acx:lang> </strong><br>
-            <strong>IBAN IT 41Z 03185 21500 0000 1001 4876</acx:lang> </strong><br>
+          <p><strong>REGALAMI UN SORRISO ETS <br>
+            Banca IFIGEST Prato </strong><br>
+            <strong>IBAN IT 41Z 03185 21500 0000 1001 4876 </strong><br>
             <br>
-            <strong>in alternativa:</acx:lang></strong><br>
-            CONTO CORRENTE POSTALE c/c 89587968</acx:lang> <br>
-            IBAN IT 77H 07601 02800 0000 8958 7968</acx:lang></p>
+            <strong>in alternativa:</strong><br>
+            CONTO CORRENTE POSTALE c/c 89587968 <br>
+            IBAN IT 77H 07601 02800 0000 8958 7968</p>
             </div>
           <div class="p-3">
-            <p><strong>STATUTO</acx:lang></strong>:<br>
-              La ETS REGALAMI UN SORRISO persegue tramite la propria organizzazione di volontariato, senza finalità lucrative,</acx:lang><br>
-              l'attività di progettare, istruire, organizzare, dirigere e coordinare  manifestazioni culturali, sportive, tecniche, artistiche.</acx:lang><br>
-              con lo scopo di arrecare benefici a persone svantaggiate dal punto di vista delle condizioni fisiche, psichiche ed economiche.</acx:lang><br>
-              Con decorrenza dal 20/03/2008 al prot. n. 15238 del 02/04/2008 iscrizione dell'associazione nel registro delle ONLUS.</acx:lang></p>
-            <p>Con rogito del 26/10/2020</acx:lang> Regalami un sorriso</acx:lang> è iscritta nel registro unico del terzo settore.</acx:lang></p>
+            <p><strong>STATUTO</strong>:<br>
+              La ETS REGALAMI UN SORRISO persegue tramite la propria organizzazione di volontariato, senza finalità lucrative,<br>
+              l'attività di progettare, istruire, organizzare, dirigere e coordinare  manifestazioni culturali, sportive, tecniche, artistiche.<br>
+              con lo scopo di arrecare benefici a persone svantaggiate dal punto di vista delle condizioni fisiche, psichiche ed economiche.<br>
+              Con decorrenza dal 20/03/2008 al prot. n. 15238 del 02/04/2008 iscrizione dell'associazione nel registro delle ONLUS.</p>
+            <p>Con rogito del 26/10/2020 Regalami un sorriso è iscritta nel registro unico del terzo settore.</p>
           </div> 
         </div>
     

@@ -1,3 +1,4 @@
+<!-- inc_footer.jsp -->
 <%@page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="/WEB-INF/acxent.tld" prefix="acx" %>
 <%@ taglib uri="/WEB-INF/art.tld" prefix="art" %>
@@ -23,29 +24,29 @@
       
       <div class="col-lg-3 col-md-6">
         <h4><acx:lang>Contatti</acx:lang></h4>
-        <p><acx:lang>ETS Regalami un sorriso</acx:lang><br>
-          <acx:lang>Via Torquato Tasso, 23/C</acx:lang><br>
-          <acx:lang>59100 Prato PO</acx:lang><br>
-          <acx:lang>CF 92076170486</acx:lang><br>
-        <a href="mailto:foto@pierogiacomelli.com"><acx:lang>foto@pierogiacomelli.com</acx:lang></a><br>
-        <a href="mailto:foto.atletica.immagine@gmail.com"><acx:lang>foto.atletica.immagine@gmail.com</acx:lang></a><br>
-        <a href="mailto:regalamiunsorriso@pec.pierogiacomelli.com"><acx:lang>regalamiunsorriso@pec.pierogiacomelli.com</acx:lang></a>        <br>
-        <acx:lang>Solo</acx:lang> <i class="fa fa-whatsapp fa-2x" aria-hidden="true" title="<acx:lang>WhatsApp</acx:lang>" style="color:#25e47b"></i>: 348 7258209 
+        <p>ETS Regalami un sorriso<br>
+          Via Torquato Tasso, 23/C<br>
+          59100 Prato PO<br>
+          CF 92076170486<br>
+        <a href="mailto:foto@pierogiacomelli.com">foto@pierogiacomelli.com</a><br>
+        <a href="mailto:foto.atletica.immagine@gmail.com">foto.atletica.immagine@gmail.com</a><br>
+        <a href="mailto:regalamiunsorriso@pec.pierogiacomelli.com">regalamiunsorriso@pec.pierogiacomelli.com</a>        <br>
+        <acx:lang>Solo</acx:lang> <i class="fa fa-whatsapp fa-2x" aria-hidden="true" title="WhatsApp" style="color:#25e47b"></i>: 348 7258209 
         </p>
       </div>
       <div class="col-lg-3 col-md-6">
         <h4><acx:lang>Informazioni</acx:lang></h4>
         <ul class="list-unstyled">
-          <li><a href="associazione.html"><acx:lang>Associazione</acx:lang></a></li>
-			<li><a href="privacy.html"><acx:lang>Privacy</acx:lang></a></li>
-       <li><a href="cookies.html"><acx:lang>Cookies</acx:lang></a></li>
+          <li><a href="associazione-<%=lang%>.html"><acx:lang>Associazione</acx:lang></a></li>
+			<li><a href="privacy-<%=lang%>.html"><acx:lang>Privacy</acx:lang></a></li>
+       <li><a href="cookies-<%=lang%>.html"><acx:lang>Cookies</acx:lang></a></li>
         </ul>
       </div>
     </div>
   </div>
   <hr>
 
-  <p class="text-center text-secondary"><small><acx:lang>Copyright</acx:lang></small></p>
+  <p class="text-center text-secondary"><small>Copyright</small></p>
   <p class="triangle"><a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></p>
 </footer>
 <script src="_js/noTastoDx.js"></script> 

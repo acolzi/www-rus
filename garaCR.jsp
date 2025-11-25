@@ -77,7 +77,7 @@
   <!-- Marketing Icons Section -->
   <div class="row mb-5">
     <div class="col-lg-12">
-      <h1 class="my-4"><span class="text-secondary"><%=CR.getTipoGara().getTipoGaraPadre().getDescrizione()%> //</span><%=CR.getTipoGara().getDescrizione()%></h1>
+      <h1 class="my-4"><span class="text-secondary"><%=CR.getTipoGara().getTipoGaraPadre().getDescrizione(lang)%> //</span><%=CR.getTipoGara().getDescrizione(lang)%></h1>
       <!-- Form ricerca sport -->
       <form class="form-giallo" action="Gara.abl" method="post" id="main" name="main">
         <input type="hidden" id="tipoGaraDesc" name="tipoGaraDesc" value="<%=CR.getTipoGara().getDescrizione()%>">

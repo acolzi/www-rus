@@ -40,7 +40,7 @@
 <%@ taglib uri="/WEB-INF/news.tld" prefix="news" %>
 <!-- InstanceEndEditable -->
 <!-- InstanceBeginEditable name="doctitle" -->
-<title><acx:lang>Regalami Un Sorriso ETS - Correndo, sognando e... lottando</acx:lang></title>
+<title>Regalami Un Sorriso ETS - <acx:lang>Correndo, sognando e... lottando</acx:lang></title>
 <!-- InstanceEndEditable -->
 
 <!-- Bootstrap core CSS -->
@@ -66,7 +66,9 @@
 </head>
 <body>
 <!-- Page Content -->
-<!-- InstanceBeginEditable name="main" --><div class="container my-3">
+<!-- InstanceBeginEditable name="main" -->  <jsp:include page="_inc_header.jsp"  flush="true" >
+  	<jsp:param name="menuAttivo" value="associazione"/>
+  </jsp:include><div class="container my-3">
   <div class="row">
     <div class="col-lg-12 my-4">
       <h1 class="my-3">Atletica Immagine - About Us</h1>

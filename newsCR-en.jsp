@@ -1,4 +1,4 @@
-<!DOCTYPE html><jsp:useBean id="lang" class="java.lang.String" type="java.lang.String" scope="session" >
+<!DOCTYPE html><jsp:useBean id="lang" class="java.lang.String" type="java.lang.String" scope="session" ></jsp:useBean>
 <%@page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="/WEB-INF/acxent.tld" prefix="acx" %>
 <%@ taglib uri="/WEB-INF/art.tld" prefix="art" %>
@@ -75,9 +75,7 @@
       <div class="row">
         <div class="col-lg-3 col-xs-12"><img src="pics/atletica2.jpg" class="img-fluid"></div>
         <div class="col-lg-9 col-xs-12">
-          <p>ATLETICA IMMAGINE è una pubblicazione che si integra nella piattaforma tecnica ed organizzativa della Ets regalami un sorriso www.regalamiunsorriso.it , sicuro punto di riferimento per gli appassionati di sport e podismo, sempre aggiornato agli eventi avvenuti fino a poche ore prima.
-            
-            La rivista si può ricevere comodamente a casa o sul proprio telefonino e/o tablet aderendo alla mail list o semplicemente scaricandola dallo stesso server foto di regalami un sorriso.</p>
+          <p>ATLETICA IMMAGINE is a publication integrated into the technical and organizational platform of Ets regalami un sorriso (Give Me a Smile) www.regalamiunsorriso.it, a trusted resource for sports and running enthusiasts, always up-to-date on events up to a few hours before. The magazine can be conveniently delivered to your home or delivered to your mobile phone and/or tablet by joining the mailing list or simply downloading it from the same photo server as regalami un sorriso.</p>
           <p><a href="atleticaImmagine_chiSiamo.html"><acx:lang>Chi Siamo</acx:lang></a></p>
         </div>
       </div>

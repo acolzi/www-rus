@@ -66,17 +66,17 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav">
         <li class="nav-item"> <a class="nav-link <%= menuAttivo.equals("home") ? "active" : "" %>" href="index.html"><acx:lang>Home</acx:lang></a> </li>
-        <li class="nav-item"> <a class="nav-link <%= menuAttivo.equals("associazione") ? "active" : "" %>" href="associazione.html"><acx:lang>Associazione</acx:lang></a> </li>
-        <li class="nav-item"> <a class="nav-link <%= menuAttivo.equals("associazione") ? "active" : "" %>" href="  rivista+atleticaImmagine.html"><img src="pics/atletica2.jpg" class="img-fluid" style="max-width: 110px"></a> </li>
+        <li class="nav-item"> <a class="nav-link <%= menuAttivo.equals("associazione") ? "active" : "" %>" href="associazione-<%=lang%>.html"><acx:lang>Associazione</acx:lang></a> </li>
+        <li class="nav-item"> <a class="nav-link <%= menuAttivo.equals("associazione") ? "active" : "" %>" href="  rivista+atleticaImmagine-<%=lang%>.html"><img src="pics/atletica2.jpg" class="img-fluid" style="max-width: 110px"></a> </li>
         <li class="nav-item dropdown"> <a href="#" class="dropdown-toggle nav-link  <%= menuAttivo.equals("fotox") ? "active" : "" %>" data-toggle="dropdown"><acx:lang>Foto</acx:lang> <b class="caret"></b></a>
           <ul class="dropdown-menu multi-column columns-2" style="overflow-y:scroll">
             <div class="row">
               <pg:whiletipogara id_tipoPadre="0" rowbeanname="rowBean">
                 <div class="col-sm-6 <%=rowBean.getId_tipoGara()==2?"vertical-divider":""%>">
-                  <h2><%=rowBean.getDescrizione()%></h2>
+                  <h2><%=rowBean.getDescrizione(lang)%></h2>
                   <ul class="multi-column-dropdown">
                     <pg:whiletipogara id_tipoPadre="<%=rowBean.getId_tipoGara()%>" id_tipoPadreSelected="<%=rowBean.getId_tipoGara()%>"  rowbeanname="rowBean1">
-                      <li><a href="<%=rowBean1.getDescrizione()%>-elenco_eventi-<%=rowBean1.getId_tipoGara()%>---1.html"><%=rowBean1.getDescrizione()%></a></li>
+                      <li><a href="<%=rowBean1.getDescrizione()%>-elenco_eventi-<%=rowBean1.getId_tipoGara()%>---1-<%=lang%>.html"><%=rowBean1.getDescrizione(lang)%></a></li>
                     </pg:whiletipogara>
                   </ul>
                 </div>
@@ -105,7 +105,7 @@
             </ul>
           </li>
         </acx:else>
-        <acx:if_logon_ok> <a href="dettaglio_clienti.html"><img src="https://www.regalamiunsorriso.it/images/btn_donateCC_LG.gif" border="0" name="submit" alt="<acx:lang>PayPal - Il sistema di pagamento online piu' facile e sicuro!</acx:lang>"></a> 
+        <acx:if_logon_ok> <a href="dettaglio_clienti-<%=lang%>.html"><img src="https://www.regalamiunsorriso.it/images/btn_donateCC_LG.gif" border="0" name="submit" alt="<acx:lang>PayPal - Il sistema di pagamento online piu' facile e sicuro!</acx:lang>"></a> 
           <!--
           <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
             <input type="hidden" name="cmd" value="_s-xclick">
@@ -114,21 +114,21 @@
           </form>--> 
         </acx:if_logon_ok>
         <acx:else_logon>
-          <li class="nav-item"> <a href="login_clienti.html"><img src="https://www.regalamiunsorriso.it/images/btn_donateCC_LG.gif" border="0" name="submit" alt="<acx:lang>PayPal - Il sistema di pagamento online piu' facile e sicuro!</acx:lang>"></a></li>
+          <li class="nav-item"> <a href="login_clienti-<%=lang%>.html"><img src="https://www.regalamiunsorriso.it/images/btn_donateCC_LG.gif" border="0" name="submit" alt="<acx:lang>PayPal - Il sistema di pagamento online piu' facile e sicuro!</acx:lang>"></a></li>
         </acx:else_logon>  </ul>
        
       <acx:if_logon_ok>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle <%= menuAttivo.equals("account") ? "active" : "" %>" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-user" aria-hidden="true"></i> <acx:lang>Il mio account</acx:lang> </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item" href="dettaglio_clienti.html"><i class="fa fa-user" aria-hidden="true"></i> <acx:lang>Dettaglio Account</acx:lang></a> <a class="dropdown-item" href="<%=attivita.getNoCacheTs()%>-user_logout.html"><i class="fa fa-sign-out" aria-hidden="true"></i> <acx:lang>Esci</acx:lang></a> </div>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item" href="dettaglio_clienti-<%=lang%>.html"><i class="fa fa-user" aria-hidden="true"></i> <acx:lang>Dettaglio Account</acx:lang></a> <a class="dropdown-item" href="<%=attivita.getNoCacheTs()%>-user_logout-<%=lang%>.html"><i class="fa fa-sign-out" aria-hidden="true"></i> <acx:lang>Esci</acx:lang></a> </div>
           </li>
           <li class="nav-item"> <a class="nav-link" href="https://it-it.facebook.com/pg/Regalami-un-sorriso-ETS-189377806523/community/"><img src="images/FB-f-Logo__blue_29.png" class="img-fluid" alt="<acx:lang>Facebook</acx:lang>"></a></li>
         </ul>
       </acx:if_logon_ok>
       <acx:else_logon>
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"> <a class="nav-link <%= menuAttivo.equals("login") ? "active" : "" %>" href="<%=attivita.getNoCacheTs()%>-login_clienti.html"><i class="fa fa-user" aria-hidden="true"></i> <acx:lang>Login</acx:lang></a> </li>
-          <li class="nav-item"> <a class="nav-link <%= menuAttivo.equals("diventa") ? "active" : "" %>" href="registrazione_utente.html"><i class="fa fa-user-plus" aria-hidden="true"></i> <acx:lang>Iscriviti e Diventa sostenitore!</acx:lang></a> </li>
+          <li class="nav-item"> <a class="nav-link <%= menuAttivo.equals("login") ? "active" : "" %>" href="<%=attivita.getNoCacheTs()%>-login_clienti-<%=lang%>.html"><i class="fa fa-user" aria-hidden="true"></i> <acx:lang>Login</acx:lang></a> </li>
+          <li class="nav-item"> <a class="nav-link <%= menuAttivo.equals("diventa") ? "active" : "" %>" href="registrazione_utente-<%=lang%>.html" style="font-size: 11px"><i class="fa fa-user-plus" aria-hidden="true"></i> <acx:lang>Iscriviti e Diventa sostenitore!</acx:lang></a> </li>
           <li class="nav-item"> <a class="nav-link" href="https://it-it.facebook.com/pg/Regalami-un-sorriso-ETS-189377806523/community/"><img src="images/FB-f-Logo__blue_29.png" class="img-fluid" alt="<acx:lang>Facebook</acx:lang>"></a></li>
         </ul>
       </acx:else_logon>

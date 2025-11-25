@@ -1,4 +1,4 @@
-<!DOCTYPE html><jsp:useBean id="lang" class="java.lang.String" type="java.lang.String" scope="session" >
+<!DOCTYPE html><jsp:useBean id="lang" class="java.lang.String" type="java.lang.String" scope="session" ></jsp:useBean>
 <%@page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="/WEB-INF/acxent.tld" prefix="acx" %>
 <%@ taglib uri="/WEB-INF/art.tld" prefix="art" %>
@@ -39,7 +39,7 @@
 <%@ taglib uri="/WEB-INF/news.tld" prefix="news" %>
 <!-- InstanceEndEditable -->
 <!-- InstanceBeginEditable name="doctitle" -->
-<title><acx:lang>Regalami Un Sorriso ETS - Correndo, sognando e... lottando</acx:lang></title>
+<title>Regalami Un Sorriso ETS - <acx:lang>Correndo, sognando e... lottando</acx:lang></title>
 <!-- InstanceEndEditable -->
 
 <!-- Bootstrap core CSS -->
