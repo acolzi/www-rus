@@ -1,14 +1,16 @@
-<!DOCTYPE html><jsp:useBean id="lang" class="java.lang.String" type="java.lang.String" scope="session" ></jsp:useBean>
+<!DOCTYPE html>
+<jsp:useBean id="lang" class="java.lang.String" type="java.lang.String" scope="session" >
+</jsp:useBean>
 <%@page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="/WEB-INF/acxent.tld" prefix="acx" %>
 <%@ taglib uri="/WEB-INF/art.tld" prefix="art" %>
 <%@ taglib uri="/WEB-INF/pg.tld" prefix="pg" %>
 <%@ page language="java" import="it.acxent.jsp.Ab" %>
 <%@ taglib uri="/WEB-INF/cc.tld" prefix="cc" %>
-<html lang="<%=lang%>"><!-- InstanceBegin template="/Templates/rus.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="<%=lang%>">
+<!-- InstanceBegin template="/Templates/rus.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <jsp:include page="_inc_lang.jsp"  flush="true"  />
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
@@ -16,7 +18,7 @@
 <!-- [favicon] begin -->
 <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
 <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-<!-- [favicon] end -->
+<!-- [favicon] end --> 
 <!-- JSP -->
 <jsp:useBean id="_listaLangAtt" class="it.acxent.util.Vectumerator" type="it.acxent.util.Vectumerator" scope="session">
 </jsp:useBean>
@@ -61,7 +63,7 @@
 <jsp:include page="_inc_head.jsp" flush="true" />
 </head>
 <body>
-<!-- Page Content -->
+<!-- Page Content --> 
 <!-- InstanceBeginEditable name="main" -->
 <acx:if_logon_ok >
   <jsp:include page="_inc_header.jsp"  flush="true" >
@@ -71,184 +73,192 @@
     <div class="row">
       <div class="col-lg-12 my-4">
         <h1 class="my-3">Area utente</h1>
-		  <p>Ciao <%=bean.getCognomeNome()%></p>
+        <p>Ciao <%=bean.getCognomeNome()%></p>
       </div>
     </div>
   </div>
 </acx:if_logon_ok>
-  <acx:else_logon>
- <jsp:include page="_inc_header.jsp"  flush="true" >
-  	<jsp:param name="menuAttivo" value="account"/>
+<acx:else_logon>
+  <jsp:include page="_inc_header.jsp"  flush="true" >
+  <jsp:param name="menuAttivo" value="account"/>
   </jsp:include>
 </acx:else_logon>
-  <div class="container my-3">
-    <div class="row">
-      <div class="col-lg-12">
-        <form class="container" id="dettaglio" novalidate action="Users.abl" method="post" name="dettaglio" onsubmit="return controlloRegistrazione();">
-          <h1 class="my-3 text-capitalize">Registrazione/Modifica dati</h1>
-          <div class="alert-warning" style="    font-size: 24px;
+<div class="container my-3">
+  <div class="row">
+    <div class="col-lg-12">
+      <form class="container" id="dettaglio" novalidate action="Users.abl" method="post" name="dettaglio" onsubmit="return controlloRegistrazione();">
+        <h1 class="my-3 text-capitalize">Registrazione/Modifica dati</h1>
+        <div class="alert-warning" style="    font-size: 24px;
     font-weight: BOLD;"> <%=msg%></div>
-         
-
-          <p class="mt-5 mb-4">Se sei gia' un Sostenitore Ets Regalami un Sorriso, vai alla pagina di <a href="login_clienti.html">login</a>, altrimenti leggi attentamente quanto segue e registrati.</p>
-          <div class="alert alert-secondary" role="alert">
-            <p>La concessione della password di accesso a questo sito è subordinata alla presa visione e alla accettazione di quanto segue:</p>
-            <ul>
-              <li>L'utilizzo della password è strettamente personale e riservata ai soli sostenitori Ets Regalami un Sorriso,</li>
-              <li> esclusivamente consentito condividere immagini che contengano la propria persona ( anche in un contesto d'insieme con altre ). </li>
-              <li>L'impiego delle immagini condivise deve essere esclusivamente personale e privato; diversamente si dovrà chiederne anticipatamente autorizzazione al titolare del presente sito. </li>
-              <li>Si avverte che l'uso non corretto delle immagini può violare l'altrui privacy e pertanto, conseguentemente, portare ad essere vittima di sanzioni, anche di natura penale, in ottemperanza di quanto disposto degli artt. 167,169 e 170 del D.Lgs. 196/03.</li>
-              <li>Il titolare di questo sito si riserba il diritto di effettuare verifiche, attraverso i propri mezzi informatici, sulle corrette procedure di gestione delle immagini.</li>
-            </ul>
-            <div class="form-group row text-center">
-              <div class="col">
-                <div class="form-check">
-                  <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" name="ckFlgPrivComunicazione" id="ckFlgPrivComunicazione" __block_29__>
-                    <input type="hidden" name="flgPrivComunicazione" id="flgPrivComunicazione" value="<%=bean.getFlgPrivComunicazione()%>">
-                    Accetto </label>
-                </div>
+        <p class="mt-5 mb-4">Se sei gia' un Sostenitore Ets Regalami un Sorriso, vai alla pagina di <a href="login_clienti.html">login</a>, altrimenti leggi attentamente quanto segue e registrati.</p>
+        <div class="alert alert-secondary" role="alert">
+          <p>La concessione della password di accesso a questo sito è subordinata alla presa visione e alla accettazione di quanto segue:</p>
+          <ul>
+            <li>L'utilizzo della password è strettamente personale e riservata ai soli sostenitori Ets Regalami un Sorriso,</li>
+            <li> esclusivamente consentito condividere immagini che contengano la propria persona ( anche in un contesto d'insieme con altre ). </li>
+            <li>L'impiego delle immagini condivise deve essere esclusivamente personale e privato; diversamente si dovrà chiederne anticipatamente autorizzazione al titolare del presente sito. </li>
+            <li>Si avverte che l'uso non corretto delle immagini può violare l'altrui privacy e pertanto, conseguentemente, portare ad essere vittima di sanzioni, anche di natura penale, in ottemperanza di quanto disposto degli artt. 167,169 e 170 del D.Lgs. 196/03.</li>
+            <li>Il titolare di questo sito si riserba il diritto di effettuare verifiche, attraverso i propri mezzi informatici, sulle corrette procedure di gestione delle immagini.</li>
+          </ul>
+          <div class="form-group row text-center">
+            <div class="col">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" name="ckFlgPrivComunicazione" id="ckFlgPrivComunicazione" __block_29__>
+                  <input type="hidden" name="flgPrivComunicazione" id="flgPrivComunicazione" value="<%=bean.getFlgPrivComunicazione()%>">
+                  Accetto </label>
               </div>
             </div>
           </div>
-          <div class="alert alert-secondary" role="alert">
-            <p>La concessione della password di accesso a questo sito è subordinata alla presa visione della <span class="my-3"><a href="privacy.jsp">INFORMATIVA PER IL TRATTAMENTO DEI DATI PERSONALI  AI SENSI DELL’ART. 13 D.LGS. 30.6.2003 N. 196 (IN SEGUITO, “CODICE PRIVACY”) E DELL’ART. 13 REGOLAMENTO UE N. 2016/679 (IN SEGUITO, “GDPR”) </a></span>ed alla accettazione dei punti 2.A e 2.B del suddetto regolamento</p>
-            <div class="form-group row text-center">
-              <div class="col">
-                <div class="form-check">
-                  <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" name="ckFlgPrivTrattamento" id="ckfFgPrivTrattamento" __block_31__>
-                    <input type="hidden" name="flgPrivTrattamento" id="flgPrivTrattamento" value="<%=bean.getFlgPrivTrattamento()%>">
-                    Accetto </label>
-                  2.A e 2.B
-                </div>
-              </div>
+        </div>
+        <div class="alert alert-secondary" role="alert">
+          <p>La concessione della password di accesso a questo sito è subordinata alla presa visione della <span class="my-3"><a href="privacy.jsp">INFORMATIVA PER IL TRATTAMENTO DEI DATI PERSONALI  AI SENSI DELL’ART. 13 D.LGS. 30.6.2003 N. 196 (IN SEGUITO, “CODICE PRIVACY”) E DELL’ART. 13 REGOLAMENTO UE N. 2016/679 (IN SEGUITO, “GDPR”) </a></span>ed alla accettazione dei punti 2.A e 2.B del suddetto regolamento</p>
+          <div class="form-group row text-center">
+            <div class="col">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" name="ckFlgPrivTrattamento" id="ckfFgPrivTrattamento" __block_31__>
+                  <input type="hidden" name="flgPrivTrattamento" id="flgPrivTrattamento" value="<%=bean.getFlgPrivTrattamento()%>">
+                  Accetto </label>
+                2.A e 2.B </div>
             </div>
           </div>
-          <div class="alert alert-warning" role="alert">
-            <p><strong>Attenzione:</strong> il server fotografico e la condivisione delle foto è esclusivamente destinato ai sostenitori della Ets Regalami un Sorriso con questa procedura si diventa un sostenitore Ets Regalami un Sorriso altrimenti non è possibile condividere le foto.<br>
-              Per poter condividere le foto è necessario essere sostenitori della Ets.<br>
-              Condividere le foto non vuol dire acquistare le foto, la Ets Regalami un Sorriso non vende le foto, le condivide solo con i sostenitori. Le foto sono di esclusiva proprietà della Ets e non sono cedute a nessun titolo.</p>
-          </div>
-         <div class="alert alert-warning" role="alert">
-            <p><strong>Attenzione:</strong>        <ul class="mt-4">
-                <li>Con un contributo liberale di 20  puoi diventare Socio della Ets avrai il diritto di condividere 1000 foto in 1 anno </li>
-                <li>La conferma della registrazione, con username e password da voi scelti, saranno inviati all'email fornita </li>
-                <li>Siate certi della correttezza della vostra email altrimenti non riceverete mai la nostra risposta </li>
-                <li>Al termine, se tutto è stato effettuato correttamente, vi apparirà a video la conferma dei dati inseriti </li>
-                <li>Se i dati non sono corretti scrivete a <a href="mailto:foto.atletica.immagine@gmail.com">foto.atletica.immagine@gmail.com</a> </li>
-                <li>Un volta ricevuta la nostra email dovete confermare la registrazione cliccando, una sola volta, sull'apposito link </li>
-                <li>L'email deve essere scritta correttamente tutta in minuscolo </li>
-                <li>Consulta le nostre specifiche sulla <a href="privacy.html">privacy</a> </li>
-              </ul></p>
-          </div>
-          
-          <div class="row">
-            <div class="container">
-              <p class="lead"><strong>Tutti i dati sono obbligatori</strong></p>
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="validationCustom11">Email (che sarà il tuo login)</label>
+        </div>
+        <div class="alert alert-warning" role="alert">
+          <p><strong>Attenzione:</strong> il server fotografico e la condivisione delle foto è esclusivamente destinato ai sostenitori della Ets Regalami un Sorriso con questa procedura si diventa un sostenitore Ets Regalami un Sorriso altrimenti non è possibile condividere le foto.<br>
+            Per poter condividere le foto è necessario essere sostenitori della Ets.<br>
+            Condividere le foto non vuol dire acquistare le foto, la Ets Regalami un Sorriso non vende le foto, le condivide solo con i sostenitori. Le foto sono di esclusiva proprietà della Ets e non sono cedute a nessun titolo.</p>
+        </div>
+        <div class="alert alert-warning" role="alert">
+          <p><strong>Attenzione:</strong>
+          <ul class="mt-4">
+            <li>Con un contributo liberale di 20  puoi diventare Socio della Ets avrai il diritto di condividere 1000 foto in 1 anno </li>
+            <li>La conferma della registrazione, con username e password da voi scelti, saranno inviati all'email fornita </li>
+            <li>Siate certi della correttezza della vostra email altrimenti non riceverete mai la nostra risposta </li>
+            <li>Al termine, se tutto è stato effettuato correttamente, vi apparirà a video la conferma dei dati inseriti </li>
+            <li>Se i dati non sono corretti scrivete a <a href="mailto:foto.atletica.immagine@gmail.com">foto.atletica.immagine@gmail.com</a> </li>
+            <li>Un volta ricevuta la nostra email dovete confermare la registrazione cliccando, una sola volta, sull'apposito link </li>
+            <li>L'email deve essere scritta correttamente tutta in minuscolo </li>
+            <li>Consulta le nostre specifiche sulla <a href="privacy.html">privacy</a> </li>
+          </ul>
+          </p>
+        </div>
+        <div class="row">
+          <div class="container">
+            <p class="lead"><strong>Tutti i dati sono obbligatori</strong></p>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="validationCustom11">Email (che sarà il tuo login)</label>
+                <acx:if wherecondition="<%=bean.getId_users()==0%>">
                   <input type="text" class="form-control rounded-0" id="login" name="login" value="<%=bean.getLogin()%>" required __block_34__>
-                </div>   <acx:if wherecondition="<%=bean.isSocialAccount()%>"> <div class="col-md-6 mb-3">
-                  <label for="validationCustom12">Password:</label><br>
-                  <b style="color: darkred">
-                      Hai eseguito l'accesso tramite il tuo account 
-                      <%=bean.getSocialIdType()%></b>
-                </div></acx:if><acx:else>
+                </acx:if>
+                <acx:else><br>
+                  <strong><%=bean.getLogin()%></strong></acx:else>
+              </div>
+              <acx:if wherecondition="<%=bean.isSocialAccount()%>">
+                <div class="col-md-6 mb-3">
+                  <label for="validationCustom12">Password:</label>
+                  <br>
+                  <b style="color: darkred"> Hai eseguito l'accesso tramite il tuo account <%=bean.getSocialIdType()%></b> </div>
+              </acx:if>
+              <acx:else>
                 <acx:if wherecondition="<%=bean.getId_users()>0%>">
-                	 <div class="col-md-6 mb-3">
-                  <label for="validationCustom12">Password (solo se vuoi cambiarla)</label>
-                  <input type="password" class="form-control rounded-0" id="newpwd" name="newpwd">
-                </div>
-                	
+                  <div class="col-md-6 mb-3">
+                    <label for="validationCustom12">Password (solo se vuoi cambiarla)</label>
+                    <input type="password" class="form-control rounded-0" id="newpwd" name="newpwd">
+                  </div>
                 </acx:if>
                 <acx:else>
-                <div class="col-md-6 mb-3">
-                  <label for="validationCustom12">Scegli la tua Password</label>
-                  <input type="password" class="form-control rounded-0" id="pwd" name="pwd" value="<%=bean.getPwd()%>" required>
-                </div>
-                </acx:else></acx:else>
+                  <div class="col-md-6 mb-3">
+                    <label for="validationCustom12">Scegli la tua Password</label>
+                    <input type="password" class="form-control rounded-0" id="pwd" name="pwd" value="<%=bean.getPwd()%>" required>
+                  </div>
+                </acx:else>
+              </acx:else>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="validationCustom01">Nome</label>
+                <input type="text" class="form-control rounded-0" id="nome" name="nome" value="<%=bean.getNome()%>" required>
               </div>
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="validationCustom01">Nome</label>
-                  <input type="text" class="form-control rounded-0" id="nome" name="nome" value="<%=bean.getNome()%>" required>
-                </div>
-                <div class="col-md-6 mb-3">
-                  <label for="validationCustom02">Cognome</label>
-                  <input type="text" class="form-control rounded-0" id="cognome" name="cognome" value="<%=bean.getCognome()%>" required>
-                </div>
+              <div class="col-md-6 mb-3">
+                <label for="validationCustom02">Cognome</label>
+                <input type="text" class="form-control rounded-0" id="cognome" name="cognome" value="<%=bean.getCognome()%>" required>
               </div>
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="validationCustom04">Telefono</label>
-                  <input type="text" class="form-control rounded-0" id="telefono" name="telefono" value="<%=bean.getTelefono()%>" required>
-                </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="validationCustom04">Telefono</label>
+                <input type="text" class="form-control rounded-0" id="telefono" name="telefono" value="<%=bean.getTelefono()%>" required>
               </div>
-              <div class="row">
-                <div class="col-md-3 mb-3">
-                  <label for="validationCustom05">Città</label>
-                  <input type="text" required class="form-control rounded-0" id="citta" name="citta" value="<%=bean.getCitta()%>">
-                </div>
-                <div class="col-md-2 mb-3">
-                  <label for="validationCustom05">Cap</label>
-                  <input type="text" required class="form-control rounded-0" id="cap" name="cap" value="<%=bean.getCap()%>">
-                </div>
-                 <div class="col-md-1 mb-3">
-                  <label for="validationCustom05">Prov.</label>
-                  <input type="text" required class="form-control rounded-0" id="provincia" name="provincia" value="<%=bean.getProvincia()%>">
-                </div>
-                <div class="col-md-5 mb-3">
-                  <label for="validationCustom06">Via</label>
-                  <input type="text" required class="form-control rounded-0" id="indirizzo" name="indirizzo" value="<%=bean.getIndirizzo()%>">
-                </div>
-                <div class="col-md-1 mb-3">
-                  <label for="validationCustom07">Num.</label>
-                  <input type="text" required class="form-control rounded-0" id="numeroCivico" name="numeroCivico" value="<%=bean.getNumeroCivico()%>">
-                </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 mb-3">
+                <label for="validationCustom05">Città</label>
+                <input type="text" required class="form-control rounded-0" id="citta" name="citta" value="<%=bean.getCitta()%>">
               </div>
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="validationCustom08">Codice Fiscale</label>
-                  <input type="text" class="form-control rounded-0" id="codFisc" name="codFisc" value="<%=bean.getCodFisc()%>">
-                </div>
-                <div class="col-md-6 mb-3">
-                  <label for="validationCustom09">Gruppo Sportivo</label>
-                  <input type="text" class="form-control rounded-0" id="contatto" name="contatto" value="<%=bean.getContatto()%>" required>
-                </div>
+              <div class="col-md-2 mb-3">
+                <label for="validationCustom05">Cap</label>
+                <input type="text" required class="form-control rounded-0" id="cap" name="cap" value="<%=bean.getCap()%>">
               </div>
-              <div class="row">
-                <div class="col-md-12 mb-4">
-                  <label for="validationCustom10">Motivo della richiesta di iscrizione</label>
-                  <textarea class="form-control rounded-0" id="nota" name="nota" rows="3" required><%=bean.getNota()%></textarea>
-           
-                </div>
+              <div class="col-md-1 mb-3">
+                <label for="validationCustom05">Prov.</label>
+                <input type="text" required class="form-control rounded-0" id="provincia" name="provincia" value="<%=bean.getProvincia()%>">
               </div>
-					<div class="row">
-                <div class="col-md-12 mb-4">
-					<acx:if wherecondition="<%=bean.getId_users()==0%>">      <input type="checkbox" id="ckflgMl" name="ckflgMl" checked />
-                    <input type="hidden" name="flgMl" id="flgMl" value="1" /></acx:if><acx:else>
+              <div class="col-md-5 mb-3">
+                <label for="validationCustom06">Via</label>
+                <input type="text" required class="form-control rounded-0" id="indirizzo" name="indirizzo" value="<%=bean.getIndirizzo()%>">
+              </div>
+              <div class="col-md-1 mb-3">
+                <label for="validationCustom07">Num.</label>
+                <input type="text" required class="form-control rounded-0" id="numeroCivico" name="numeroCivico" value="<%=bean.getNumeroCivico()%>">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="validationCustom08">Codice Fiscale</label>
+                <input type="text" class="form-control rounded-0" id="codFisc" name="codFisc" value="<%=bean.getCodFisc()%>">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="validationCustom09">Gruppo Sportivo</label>
+                <input type="text" class="form-control rounded-0" id="contatto" name="contatto" value="<%=bean.getContatto()%>" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 mb-4">
+                <label for="validationCustom10">Motivo della richiesta di iscrizione</label>
+                <textarea class="form-control rounded-0" id="nota" name="nota" rows="3" required><%=bean.getNota()%></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 mb-4">
+                <acx:if wherecondition="<%=bean.getId_users()==0%>">
+                  <input type="checkbox" id="ckflgMl" name="ckflgMl" checked />
+                  <input type="hidden" name="flgMl" id="flgMl" value="1" />
+                </acx:if>
+                <acx:else>
                   <input type="checkbox" id="ckflgMl" name="ckflgMl" __block_51__ />
-                    <input type="hidden" name="flgMl" id="flgMl" value="<%=bean.getClifor().getFlgMl()%>" /></acx:else>
-                    Iscrizione Atletica Immagine
-                    <div class="invalid-feedback"> ATTENZIONE! Alcuni campi non sono stati compilati</div><br>
-                  <div class="alert-warning" style="    font-size: 24px;
+                  <input type="hidden" name="flgMl" id="flgMl" value="<%=bean.getClifor().getFlgMl()%>" />
+                </acx:else>
+                Iscrizione Atletica Immagine
+                <div class="invalid-feedback"> ATTENZIONE! Alcuni campi non sono stati compilati</div>
+                <br>
+                <div class="alert-warning" style="    font-size: 24px;
     font-weight: BOLD;"> <%=msg%></div>
-                </div>
               </div>
-              <div class="row">
-                <div class="col-md-12 mb-3 text-center">
-                  <button class="btn btn-primary" type="submit">Invia la richiesta</button>
-                  <input type="hidden" name="id_users" value="<%=bean.getId_users() %>">
-                  <input name="id_userProfile" type="hidden" id="id_userProfile" value="9">
-                  <input type="hidden" name="flgValido" value="<%=bean.getFlgValido()%>">
-                  <input type="hidden" name="id_profiloUtente" value="9">
-                  <input type="hidden" name="act" value="save">
-                  <input type="hidden" name="cmd" value="asq">
-                </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 mb-3 text-center">
+                <button class="btn btn-primary" type="submit">Invia la richiesta</button>
+                <input type="hidden" name="id_users" value="<%=bean.getId_users() %>">
+                <input name="id_userProfile" type="hidden" id="id_userProfile" value="9">
+                <input type="hidden" name="flgValido" value="<%=bean.getFlgValido()%>">
+                <input type="hidden" name="id_profiloUtente" value="9">
+                <input type="hidden" name="act" value="save">
+                <input type="hidden" name="cmd" value="asq">
               </div>
-              <script>
+            </div>
+            <script>
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
   "use strict";
@@ -266,20 +276,18 @@
     }, false);
   }, false);
 }());
-</script>
-       
-            </div>
+</script> 
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   </div>
+</div>
 
-<!-- /.container --> <!-- InstanceEndEditable -->
+<!-- /.container --> <!-- InstanceEndEditable --> 
 
 <!-- Footer -->
- <jsp:include page="_inc_footer.jsp" flush="true" />
-
+<jsp:include page="_inc_footer.jsp" flush="true" />
 <script>
 	$('#datepicker-sport').datepicker({
     language: "it"
@@ -288,8 +296,9 @@
     language: "it"
 });
 		
-	</script>
-	<!-- InstanceBeginEditable name="lastStuff" --> <!-- InstanceEndEditable -->
+	</script> 
+<!-- InstanceBeginEditable name="lastStuff" --> <!-- InstanceEndEditable -->
 <div class="modal-loading"></div>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>

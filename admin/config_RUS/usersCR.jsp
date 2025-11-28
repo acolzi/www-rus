@@ -179,8 +179,8 @@
   <script language="JavaScript" src="../_V4/_js/_reset.js"></script> 
   <!-- InstanceBeginEditable name="js-pagina" --> 
   <!-- SCRIPT PERSONALIZZATI DELLA PAGINA --> 
-  <script language="JavaScript" src="../config/_js/ab-usersCommon.js"></script> 
-  <script language="JavaScript" src="../config_RUS/_js/ab-usersApp.js"></script> 
+  <script language="JavaScript" src="../config/_js/acxent-usersCommon.js"></script> 
+  <script language="JavaScript" src="../config_RUS/_js/acxent-usersApp.js"></script> 
   <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="extra" --> <!-- InstanceEndEditable --> </acx:if_logon_ok>
 <acx:else_logon> gestire il redirect al login </acx:else_logon>
 <!-- InstanceEnd -->

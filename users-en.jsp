@@ -145,8 +145,10 @@
               <p class="lead"><strong>All fields are mandatory</strong></p>
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <label for="validationCustom11">Email (which will be your login)</label>
-                  <input type="text" class="form-control rounded-0" id="login" name="login" value="<%=bean.getLogin()%>" required __block_34__>
+                  <label for="validationCustom11">Email (which will be your login)</label>    <acx:if wherecondition="<%=bean.getId_users()==0%>">
+                  <input type="text" class="form-control rounded-0" id="login" name="login" value="<%=bean.getLogin()%>" required __block_34__></acx:if>
+					 <acx:else><br>
+                  <strong><%=bean.getLogin()%></strong></acx:else>
                 </div>   <acx:if wherecondition="<%=bean.isSocialAccount()%>"> <div class="col-md-6 mb-3">
                   <label for="validationCustom12">Password:</label><br>
                   <b style="color: darkred">
