@@ -149,7 +149,7 @@
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="validationCustom11">Email (che sarà il tuo login)</label>
-                <acx:if wherecondition="<%=bean.getId_users()==0%>">
+                <acx:if wherecondition='<%=bean.getId_users()==0 || !bean.getLogin().contains("@")%>'>
                   <input type="text" class="form-control rounded-0" id="login" name="login" value="<%=bean.getLogin()%>" required __block_34__>
                 </acx:if>
                 <acx:else><br>
