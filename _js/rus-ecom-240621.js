@@ -99,7 +99,7 @@ function searchGara() {
 function searching() {
 	//gara%201_gara-1---2.html
 	$("body").addClass("loading");
-	theSvlt = $("#garaDesc").val() + "_gara-" + $("#id_gara").val() + "-" + $("#id_puntoFoto").val() + "-" + $("#tipoPuntoFoto").val() + "-" + $("#pageRow").val() + "-1-"+$("#pettorale").val()+".html";
+	theSvlt = $("#garaDesc").val() + "_gara-" + $("#id_gara").val() + "-" + $("#id_puntoFoto").val() + "-" + $("#tipoPuntoFoto").val() + "-" + $("#pageRow").val() + "-1-"+$("#pettorale").val()+"-"+$("#lang").val()+".html";
 	//alert(theSvlt);
 	location.href = theSvlt;
 

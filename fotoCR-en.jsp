@@ -156,8 +156,8 @@
     </div>
     <div class="col-md-4 col-inline">
       <p class="lead"><acx:lang>Sono state trovate</acx:lang> <%=list.getTotNumberOfRecords()%> <acx:lang>foto</acx:lang>
-        <acx:if wherecondition="<%=CR.getFlgVisCompatta()==0%>"><a href="<%=bean.getDescrizioneGaraHtml()+"_garaC-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-"+CR.getPageNumber()+".html"%>"><i class="fa fa-search-minus" title="<acx:lang>visualizzazione compatta</acx:lang>"></i></a></acx:if>
-        <acx:else><a href="<%=bean.getDescrizioneGaraHtml()+"_garaE-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-"+CR.getPageNumber()+".html"%>"><i class="fa fa-search-plus" title="<acx:lang>visualizzazione standard</acx:lang>"></i></a></acx:else>
+        <acx:if wherecondition="<%=CR.getFlgVisCompatta()==0%>"><a href='<%=bean.getDescrizioneGaraHtml()+"_garaC-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-"+CR.getPageNumber()+"-"+langpay ><i class="fa fa-search-minus" title="<acx:lang>visualizzazione compatta</acx:lang>"></i></a></acx:if>
+        <acx:else><a href='<%=bean.getDescrizioneGaraHtml()+"_garaE-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-"+CR.getPageNumber()+"-"+lang+".html"%>' ><i class="fa fa-search-plus" title="<acx:lang>visualizzazione standard</acx:lang>"></i></a></acx:else>
       <div id="vis" style="visibility: hidden"></div>
       </p>
     </div>
@@ -165,13 +165,13 @@
       <nav aria-label="paginatore">
         <ul class="pagination justify-content-center">
           <li class="page-item" onclick="$("body").addClass("loading");location.href=$(this).attr("href")">
-            <acx:prevvec link='<%=bean.getDescrizioneGaraHtml()+"_gara-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-#-"+CR.getPettorale()+".html"%>' vectumerator="list" cssclass="page-link"> « </acx:prevvec>
+            <acx:prevvec link='<%=bean.getDescrizioneGaraHtml()+"_gara-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-#-"+CR.getPettorale()+"-"+lang+".html"%>'  vectumerator="list" cssclass="page-link"> « </acx:prevvec>
           </li>
-          <acx:vecpagelist3 separator="..." link='<%=bean.getDescrizioneGaraHtml()+"_gara-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-#-"+CR.getPettorale()+".html"%>'  vectumerator="list" numberofpages="3"  cssclassactive="active" cssclassdots="" >
+          <acx:vecpagelist3 separator="..." link='<%=bean.getDescrizioneGaraHtml()+"_gara-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-#-"+CR.getPettorale()+"-"+lang+".html"%>'  vectumerator="list" numberofpages="3"  cssclassactive="active" cssclassdots="" >
             <li class="page-item #CLASS_ACTIVE#"><a class="page-link" href="#PAGE_LINK#" onclick="$("body").addClass("loading");location.href=$(this).attr("href")">#PAGE_NUMBER#</a></li>
           </acx:vecpagelist3>
           <li class="page-item" onclick="$("body").addClass("loading");location.href=$(this).attr("href")">
-            <acx:nextvec link='<%=bean.getDescrizioneGaraHtml()+"_gara-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-#-"+CR.getPettorale()+".html"%>' vectumerator="list" cssclass="page-link"> » </acx:nextvec>
+            <acx:nextvec link='<%=bean.getDescrizioneGaraHtml()+"_gara-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-#-"+CR.getPettorale()+"-"+lang+".html"%>'  vectumerator="list" cssclass="page-link"> » </acx:nextvec>
           </li>
         </ul>
       </nav>
@@ -290,13 +290,13 @@
       <nav aria-label="paginatore">
         <ul class="pagination justify-content-center">
           <li class="page-item" onclick="$("body").addClass("loading");location.href=$(this).attr("href")">
-            <acx:prevvec link='<%=bean.getDescrizioneGaraHtml()+"_gara-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-#-"+CR.getPettorale()+".html"%>' vectumerator="list" cssclass="page-link"> « </acx:prevvec> 
+            <acx:prevvec link='<%=bean.getDescrizioneGaraHtml()+"_gara-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-#-"+CR.getPettorale()+"-"+lang+".html"%>'  vectumerator="list" cssclass="page-link"> « </acx:prevvec> 
           </li>
-          <acx:vecpagelist3 separator="..." link='<%=bean.getDescrizioneGaraHtml()+"_gara-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-#-"+CR.getPettorale()+".html"%>'  vectumerator="list" numberofpages="3"  cssclassactive="active" cssclassdots="" >
+          <acx:vecpagelist3 separator="..." link='<%=bean.getDescrizioneGaraHtml()+"_gara-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-#-"+CR.getPettorale()+"-"+lang+".html"%>'   vectumerator="list" numberofpages="3"  cssclassactive="active" cssclassdots="" >
             <li class="page-item #CLASS_ACTIVE#"><a class="page-link" href="#PAGE_LINK#" onclick="$("body").addClass("loading");location.href=$(this).attr("href")">#PAGE_NUMBER#</a></li>
           </acx:vecpagelist3>
           <li class="page-item" onclick="$("body").addClass("loading");location.href=$(this).attr("href")">
-            <acx:nextvec link='<%=bean.getDescrizioneGaraHtml()+"_gara-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-#-"+CR.getPettorale()+".html"%>' vectumerator="list" cssclass="page-link"> » </acx:nextvec>
+            <acx:nextvec link='<%=bean.getDescrizioneGaraHtml()+"_gara-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-#-"+CR.getPettorale()+"-"+lang+".html"%>'  vectumerator="list" cssclass="page-link"> » </acx:nextvec>
           </li>
         </ul>
       </nav>

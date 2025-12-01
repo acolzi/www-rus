@@ -165,13 +165,13 @@
       <nav aria-label="paginatore">
         <ul class="pagination justify-content-center">
           <li class="page-item" onclick="$("body").addClass("loading");location.href=$(this).attr("href")">
-            <acx:prevvec link='<%=bean.getDescrizioneGaraHtml()+"_gara-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-#-"+CR.getPettorale()+".html"%>' vectumerator="list" cssclass="page-link"> « </acx:prevvec>
+            <acx:prevvec link='<%=bean.getDescrizioneGaraHtml()+"_gara-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-#-"+CR.getPettorale()+"-"+lang+".html"%>' vectumerator="list" cssclass="page-link"> « </acx:prevvec>
           </li>
-          <acx:vecpagelist3 separator="..." link='<%=bean.getDescrizioneGaraHtml()+"_gara-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-#-"+CR.getPettorale()+".html"%>'  vectumerator="list" numberofpages="3"  cssclassactive="active" cssclassdots="" >
+          <acx:vecpagelist3 separator="..." link='<%=bean.getDescrizioneGaraHtml()+"_gara-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-#-"+CR.getPettorale()+"-"+lang+".html"%>'  vectumerator="list" numberofpages="3"  cssclassactive="active" cssclassdots="" >
             <li class="page-item #CLASS_ACTIVE#"><a class="page-link" href="#PAGE_LINK#" onclick="$("body").addClass("loading");location.href=$(this).attr("href")">#PAGE_NUMBER#</a></li>
           </acx:vecpagelist3>
           <li class="page-item" onclick="$("body").addClass("loading");location.href=$(this).attr("href")">
-            <acx:nextvec link='<%=bean.getDescrizioneGaraHtml()+"_gara-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-#-"+CR.getPettorale()+".html"%>' vectumerator="list" cssclass="page-link"> » </acx:nextvec>
+            <acx:nextvec link='<%=bean.getDescrizioneGaraHtml()+"_gara-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-#-"+CR.getPettorale()+"-"+lang+".html"%>' vectumerator="list" cssclass="page-link"> » </acx:nextvec>
           </li>
         </ul>
       </nav>
@@ -179,13 +179,13 @@
     <div class="col-md-3">
       <div class="form-group form-inline pull-right">
         <select name="pageRow" id="pageRow" onchange="searching()" class="custom-select form-control form-control-sm mb-2 mb-sm-0">
-          <option value="24" __block_66__>24</option>
-          <option value="36" __block_67__>36</option>
-          <option value="48" __block_68__>48</option>
-      <!--    <option value="60" <%=CR.getPageRow()==60?"selected":""%> >60</option>
+          <option value="24" <%=CR.getPageRow()==24?"selected":""%>>24</option>
+          <option value="36" <%=CR.getPageRow()==36?"selected":""%>>36</option>
+          <option value="48" <%=CR.getPageRow()==48?"selected":""%>>48</option>
+          <option value="60" <%=CR.getPageRow()==60?"selected":""%> >60</option>
           <option value="72" <%=CR.getPageRow()==72?"selected":""%> >72</option>
           <option value="84" <%=CR.getPageRow()==84?"selected":""%> >84</option>
-          <option value="96" <%=CR.getPageRow()==96?"selected":""%> >96</option> -->
+          <option value="96" <%=CR.getPageRow()==96?"selected":""%> >96</option> 
         </select> 
         <acx:if wherecondition="<%=list.getTotNumberOfPages()>1%>"> 
           <acx:lang>vai a pag.</acx:lang>
@@ -290,13 +290,13 @@
       <nav aria-label="paginatore">
         <ul class="pagination justify-content-center">
           <li class="page-item" onclick="$("body").addClass("loading");location.href=$(this).attr("href")">
-            <acx:prevvec link='<%=bean.getDescrizioneGaraHtml()+"_gara-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-#-"+CR.getPettorale()+".html"%>' vectumerator="list" cssclass="page-link"> « </acx:prevvec> 
+            <acx:prevvec link='<%=bean.getDescrizioneGaraHtml()+"_gara-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-#-"+CR.getPettorale()+"-"+lang+".html"%>'  vectumerator="list" cssclass="page-link"> « </acx:prevvec> 
           </li>
-          <acx:vecpagelist3 separator="..." link='<%=bean.getDescrizioneGaraHtml()+"_gara-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-#-"+CR.getPettorale()+".html"%>'  vectumerator="list" numberofpages="3"  cssclassactive="active" cssclassdots="" >
+          <acx:vecpagelist3 separator="..." link='<%=bean.getDescrizioneGaraHtml()+"_gara-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-#-"+CR.getPettorale()+"-"+lang+".html"%>'  vectumerator="list" numberofpages="3"  cssclassactive="active" cssclassdots="" >
             <li class="page-item #CLASS_ACTIVE#"><a class="page-link" href="#PAGE_LINK#" onclick="$("body").addClass("loading");location.href=$(this).attr("href")">#PAGE_NUMBER#</a></li>
           </acx:vecpagelist3>
           <li class="page-item" onclick="$("body").addClass("loading");location.href=$(this).attr("href")">
-            <acx:nextvec link='<%=bean.getDescrizioneGaraHtml()+"_gara-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-#-"+CR.getPettorale()+".html"%>' vectumerator="list" cssclass="page-link"> » </acx:nextvec>
+            <acx:nextvec link='<%=bean.getDescrizioneGaraHtml()+"_gara-"+bean.getId_gara()+"-"+CR.getId_puntoFoto()+"-"+CR.getTipoPuntoFoto()+"-"+CR.getPageRow()+"-#-"+CR.getPettorale()+"-"+lang+".html"%>' vectumerator="list" cssclass="page-link"> » </acx:nextvec>
           </li>
         </ul>
       </nav>

@@ -11,3 +11,6 @@
 //request,default,unavailableLang,availabeLangs
 //Ab.initSessionLang(request,"it","en","it,en");
 Ab.initSessionLang(request,attivita.getLangDefault(),attivita.getLangSeNonDisponibile(),attivita.getLangDisponibili(),false);%>
+<jsp:useBean id="lang" class="java.lang.String" type="java.lang.String" scope="session" >
+</jsp:useBean>
+<input type="hidden" name="lang" id="lang" value="<%=lang%>" />

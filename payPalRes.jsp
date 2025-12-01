@@ -1,4 +1,4 @@
-<!DOCTYPE html><jsp:useBean id="lang" class="java.lang.String" type="java.lang.String" scope="session" >
+<!DOCTYPE html><jsp:useBean id="lang" class="java.lang.String" type="java.lang.String" scope="session" ></jsp:useBean>
 <%@page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="/WEB-INF/acxent.tld" prefix="acx" %>
 <%@ taglib uri="/WEB-INF/art.tld" prefix="art" %>
